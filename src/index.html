@@ -8,8 +8,8 @@
 </head>
 <body class="page__body">
     <header class="page-header">
-        <a href="page-header__logo">
-            <img src="img/logotype-mobile.svg" alt="Приложение PINK">
+        <a href="page-header__logo logo">
+            <img class="logo__img" src="img/logotype-mobile.svg" alt="Приложение PINK">
         </a>
         <nav class="main-nav">
             <button class="main-nav__toggle" type="button">
@@ -18,22 +18,22 @@
             <div class="main-nav__wrap">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item site-list__item--active" >
-                        <a href="">
+                        <a class="site-list__link" href="./index.html">
                             Главная
                         </a>
                     </li>
                     <li class="site-list__item">
-                        <a href="">
+                        <a class="site-list__link" href="#">
                             Фотографии
                         </a>
                     </li>
                     <li class="site-list__item">
-                        <a href="">
+                        <a class="site-list__link" href="#">
                             Конкурс
                         </a>
                     </li>
                     <li class="site-list__item">
-                        <a href="">
+                        <a href="#">
                             Хе-хе
                         </a>
                     </li>
@@ -42,7 +42,7 @@
         </nav>
     </header>
 
-    <main class="page-main">
+    <section class="page-main">
         <h1 class="visually-hidden">Pink - Приложения для хорошего настроения</h1>
 
         <section class="download">
@@ -171,49 +171,44 @@
         </section>
 
         <section class="tariff">
+            <h2 class="visually-hidden">Тарифы</h2>
             <div class="tariff__wrap slider">
-                <table class="tariff__table table">
-                    <thead class="table__thead">
-                        <tr class="table__head">
-                            <td></td>
-                            <td class="table__column-head">
-                                <dl>
-                                    <dt>База</dt>
-                                    <dd>1,99 USD</dd>
-                                </dl>
+                <table class="tariff__table slider__table">
+                    <thead class="tariff__thead">
+                        <tr class="tariff__head tariff__head--empty">
+                            <td class="tariff__column-head tariff__column-head"></td>
+                            <td class="tariff__column-head">
+                                <p class="tariff__text tariff__text--thead">База</p>
+                                <p class="tariff__text tariff__text--value">1,99 USD</p>
                             </td>
-                            <td class="table__column-head">
-                                <dl>
-                                    <dt>СТАНДАРТ</dt>
-                                    <dd>3,99 USD</dd>
-                                </dl>
+                            <td class="tarif__column-head tarif__column-head--special">
+                                <p class="tariff__text tariff__text--thead">СТАНДАРТ</p>
+                                <p class="tariff__text tariff__text--value">3,99 USD</p>
                             </td>
-                            <td class="table__column-head">
-                                <dl>
-                                    <dt>АНЛИМ</dt>
-                                    <dd>9,99 USD</dd>
-                                </dl>
+                            <td class="tarif__column-head">
+                                <p class="tariff__text tariff__text--thead">АНЛИМ</p>
+                                <p class="tariff__text tariff__text--value">9,99 USD</p>
                             </td>
                         </tr>
                     </thead>
                     <tbody class="tariff__table-body">
-                        <tr>
-                            <td class="table__line-head">Розовый фильтр</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr class="">
+                            <td class="tariff__line-head tariff__text--line-head">Розовый фильтр</td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
                         </tr>
                         <tr>
-                            <td class="table__line-head">Смайлики</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tariff__line-head tariff__text--line-head">Смайлики</td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
                         </tr>
                         <tr>
-                            <td class="table__line-head">Комментарии</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tariff__line-head tariff__text--line-head">Комментарии</td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
+                            <td class="tariff__value"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -223,13 +218,54 @@
                     <button class="slider__toggle" type="button"></button>
                 </div>
             </div> 
+        </section>
 
+        <section class="contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+
+            <p class="contacts__slogan">Остались вопросы? Свяжитесь с нами</p>
+
+            <address class="contacts__info">
+                <div class="contacts__item">
+                    <h3 class="contacts__head">Звоните:</h3>
+                    <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+                </div>
+                <div class="contacts__item">
+                    <h3 class="contacts__head">Пишите:</h3>
+                    <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </div>
+                <div class="contacts__item">
+                    <h3 class="contacts__head">Приезжайте в гости:</h3>
+                    <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
+                </div>
+            </address>
+
+        </section>
+        
+        <section class="map">
+            <h2 class="visually-hidden">Геолокация</h2>
+            <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2c57e8af71eb0c4752b840a7394f974ce39241eaa636dbbe5f55219fae6bae5&amp;source=constructor" width="320" height="220" frameborder="0"></iframe>
         </section>
 
     </main>
 
-    <footer>
-
+    <footer class="page-footer">
+        <a href="page-footer__logo logo">
+            <img class="logo--pink" src="img/logotype-mobile.svg" alt="Приложение PINK">
+        </a>
+        <ul class="page-footer__social social-list">
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--twitter" href="#"></a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="#"></a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--youtube" href="#"></a>
+            </li>
+        </ul>
+        <a class="page-footer__copyright" href="#">Разработано
+        </a>
     </footer>
 </body>
 </html>
