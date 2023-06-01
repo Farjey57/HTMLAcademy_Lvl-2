@@ -1,3 +1,9 @@
-@import url("../styles/fonts.scss");
-@import url("../styles/base.scss");
-@import url("../styles/base.scss");
+@import "../styles/fonts.scss";
+@import "../styles/base.scss";
+@import "../styles/breakpoints.scss";
+@import "../styles/colors.scss";
+
+@import "../blocks/text/text.scss";
+@import "../elements/text__heading/text__heading.scss";
+@import "../elements/text__normal/text__normal.scss";
+@import "../elements/text__small/text__small.scss";

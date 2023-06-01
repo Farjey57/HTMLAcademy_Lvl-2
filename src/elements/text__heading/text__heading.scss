@@ -1,0 +1,11 @@
+.text__heading {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    &--black {
+        color: #283645;
+    }
+    &--small {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), local("Opensans-bold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), local("Opensans-light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+}
+.text {
+  font-family: "Opensans", Arial, sans-serif;
+  letter-spacing: 1.2em;
+}
+
+.text__heading {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.text__heading--black {
+  color: #283645;
+}
+.text__heading--small {
+  font-size: 16px;
+}
+
+.text__normal {
+  font-weight: 300;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.text__normal--black {
+  color: #283645;
+}
+.text__normal--red {
+  color: #D22856;
+}
+.text__normal--medium {
+  font-size: 18px;
+}
+.text__normal--small {
+  font-size: 14px;
+}
+
+.text__small {
+  font-weight: 300;
+  font-size: 14px;
+  color: #283645;
+}
+.text__small--spacing_none {
+  letter-spacing: 1em;
+}
+/*# sourceMappingURL=index.css.map */

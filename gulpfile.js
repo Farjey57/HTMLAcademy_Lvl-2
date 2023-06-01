@@ -1,9 +1,9 @@
 const gulp = require("gulp"); /* Все пакеты, используемые в автоматизации. Они ставятся из npm */
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -49,12 +49,15 @@ exports.server = server;
 /* Отслеживает группы файлов*/ 
 
 const watcher = () => {
-  gulp.watch("src/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("src/**/*.scss", start); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
   gulp.watch("src/*.html").on("change", sync.reload);
 }
 
-/* запускает все по очереди */
-
-exports.default = gulp.series(
+/* запускает все по очереди если series. parallel - максимально параллельно */
+const start = gulp.parallel(
   styles, server, watcher
 );
+
+module.exports = {
+  start
+}

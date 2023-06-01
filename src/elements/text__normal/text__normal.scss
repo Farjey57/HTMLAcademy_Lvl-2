@@ -1,0 +1,17 @@
+.text__normal {
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFFFFF;
+    &--black {
+        color: #283645;
+    }
+    &--red {
+        color: #D22856;
+    }
+    &--medium {
+        font-size: 18px;
+    }
+    &--small {
+        font-size: 14px;
+    }
+}
