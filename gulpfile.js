@@ -1,9 +1,9 @@
 const gulp = require("gulp"); /* Все пакеты, используемые в автоматизации. Они ставятся из npm */
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const less = require("gulp-less");
+const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
+const autoprefixer = require("gulp-autoprefixer");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -14,7 +14,7 @@ const sync = require("browser-sync").create();
  sync.stream() - локальная перезагрузка сервера*/
 
 const styles = () => {
-  return gulp.src("source/sass/style.sass")
+  return gulp.src("src/styles/index.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())

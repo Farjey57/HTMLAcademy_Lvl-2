@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink - Приложения для хорошего настроения</title>
+    <link rel="stylesheet" href="../dict/index.css">
 </head>
+
 <body class="page__body">
     <header class="page-header">
         <a href="page-header__logo logo">
             <img class="logo__img" src="img/logotype-mobile.svg" alt="Приложение PINK">
         </a>
         <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
+            <button class="main-nav__burger" type="button">
                 <span class="visually-hidden">Открыть меню</span>
             </button>
             <div class="main-nav__wrap">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active" >
+                    <li class="site-list__item site-list__item--active text text--button">
                         <a class="site-list__link" href="./index.html">
                             Главная
                         </a>
                     </li>
-                    <li class="site-list__item">
+                    <li class="site-list__item text text--button">
                         <a class="site-list__link" href="#">
                             Фотографии
                         </a>
                     </li>
-                    <li class="site-list__item">
+                    <li class="site-list__item text text--button">
                         <a class="site-list__link" href="#">
                             Конкурс
                         </a>
                     </li>
-                    <li class="site-list__item">
-                        <a href="#">
+                    <li class="site-list__item text text--button">
+                        <a class="site-list__link" href="#">
                             Хе-хе
                         </a>
                     </li>
@@ -42,22 +45,19 @@
         </nav>
     </header>
 
-    <section class="page-main">
+    <main class="page-main">
         <h1 class="visually-hidden">Pink - Приложения для хорошего настроения</h1>
 
         <section class="download">
-            <h2 class="download__title">
+            <h2 class="download__title text text--large">
                 Взгляните на жизнь иначе!
             </h2>
-            <figure class="download__demo">
-                <img src="./img/phone.png" alt="Визуализация телефона с установленным приложением">
-                <img src="./img/screen.jpg" alt="Пример использования приложения с наложением розового фона">
-            </figure>
+            <img class="download__demo" src="./img/phone-screen-group.png" alt="Пример использования приложения с наложением розового фона" width="320px" height="289px">
             <div class="download__choise apps">
                 <h3 class="visually-hidden">
                     Скачать приложение
                 </h3>
-                <button class="apps__button button">
+                <button class="apps__button button text__button">
                     Скачать Приложение
                 </button>
                 <ul class="apps__list">
@@ -71,7 +71,7 @@
                         <a class="apps__link apps__link--windows" href=""></a>
                     </li>
                 </ul>
-                <p class="apps__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+                <p class="apps__text text text--medium">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
                 </p>
             </div>
         </section>
@@ -81,10 +81,10 @@
                 <h2 class="visually-hidden">
                     Преимущества
                 </h2>
-                <p class="benifits__slogan">
+                <p class="benifits__slogan text text--large">
                     Устали от серости мегаполиса?
                 </p>
-                <p class="benifits__slogan">
+                <p class="benifits__slogan text text--large">
                     Нам есть, что вам предложить!
                 </p>
             </header>
@@ -268,4 +268,5 @@
         </a>
     </footer>
 </body>
+
 </html>
