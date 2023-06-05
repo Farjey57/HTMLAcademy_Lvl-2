@@ -1,0 +1,15 @@
+.page-header {
+    width: 100vw;
+    height: 66px;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    background: rgb(0,0,0,0.3);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}

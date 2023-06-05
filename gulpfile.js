@@ -14,7 +14,7 @@ const sync = require("browser-sync").create();
  sync.stream() - локальная перезагрузка сервера*/
 
 const styles = () => {
-  return gulp.src("src/styles/index.scss")
+  return gulp.src("./src/styles/index.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -22,7 +22,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("./src/css"))
     .pipe(sync.stream());
 }
 
@@ -36,6 +36,7 @@ const server = (done) => {
     server: {
       baseDir: 'src'
     },
+    port: 8080,
     cors: true,
     notify: false,
     ui: false,
@@ -49,8 +50,8 @@ exports.server = server;
 /* Отслеживает группы файлов*/ 
 
 const watcher = () => {
-  gulp.watch("src/**/*.scss", start); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
-  gulp.watch("src/*.html").on("change", sync.reload);
+  gulp.watch("./src/**/*.scss", start); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
+  gulp.watch("./src/*.html").on("change", sync.reload);
 }
 
 /* запускает все по очереди если series. parallel - максимально параллельно */
