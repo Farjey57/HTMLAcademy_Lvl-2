@@ -1,0 +1,208 @@
+/* Global */
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), url("./fonts/opensans.woff2") format("woff2"), url("./fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), local("Opensans-bold"), url("./fonts/opensansbold.woff2") format("woff2"), url("./fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Opensans";
+  src: local("Open Sans"), local("Opensans-light"), url("./fonts/opensanslight.woff2") format("woff2"), url("./fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+}
+/* Section */
+.page-header {
+  width: 100vw;
+  height: 66px;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* blocks */
+.text {
+  font-family: "Opensans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.visually-hidden {
+  color: transparent;
+  font-size: 0;
+  height: 0;
+}
+
+.apps {
+  background-color: #1D2631;
+}
+
+.button {
+  background: inherit;
+  border: 3px solid #FFFFFF;
+  border-radius: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* elements */
+.text__heading {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.text__heading--black {
+  color: #283645;
+}
+.text__heading--small {
+  font-size: 16px;
+}
+
+.text__normal {
+  font-weight: 300;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.text__normal--black {
+  color: #283645;
+}
+.text__normal--red {
+  color: #D22856;
+}
+.text__normal--medium {
+  font-size: 18px;
+}
+.text__normal--small {
+  font-size: 14px;
+}
+
+.text__small {
+  font-weight: 300;
+  font-size: 14px;
+  color: #283645;
+}
+.text__small--spacing_none {
+  letter-spacing: 1em;
+}
+
+.page__body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden scroll;
+}
+
+.main-nav__burger {
+  width: 50px;
+  height: 24px;
+  background-color: inherit;
+  border: none;
+  background-image: url("./images/open-menu-btn.svg");
+  padding: 0;
+  cursor: pointer;
+}
+
+.download__wrap {
+  background: url("../images/back-mobile.jpg") center center no-repeat;
+  background-size: cover;
+  padding-top: 95px;
+}
+
+.download__title {
+  margin-bottom: 35px;
+}
+
+.download__demo {
+  display: block;
+  margin: 0 auto;
+}
+
+.download__choise {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.apps__button {
+  width: 280px;
+  margin-top: 28px;
+}
+
+.apps__list {
+  margin: 25px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 35px;
+}
+
+.apps__link {
+  display: block;
+}
+.apps__link::before {
+  content: "";
+  width: 47px;
+  height: 56px;
+  display: block;
+  background-color: white;
+}
+.apps__link--ios::before {
+  background: url("../images/apple-logo.svg") center center no-repeat;
+}
+.apps__link--android::before {
+  background: url("../images/android-logo.svg") center center no-repeat;
+}
+.apps__link--windows::before {
+  background: url("../images/microsoft-logo.svg") center center no-repeat;
+}
+
+.apps__description {
+  margin-bottom: 35px;
+  margin-top: 0;
+}
+
+.benifits__slogan {
+  margin: 40px;
+}
+
+.benifits__list-wrap {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+.benifits__list-wrap:before, .benifits__list-wrap:after {
+  background: #F2F2F2;
+  content: "";
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.benifits__list-wrap:before {
+  top: 0px;
+  transform: skewY(-6deg);
+  transform-origin: 100% 0;
+}
+.benifits__list-wrap:after {
+  bottom: 0;
+}
+/*# sourceMappingURL=index.css.map */
