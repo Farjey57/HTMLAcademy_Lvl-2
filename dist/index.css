@@ -1,19 +1,19 @@
 /* Global */
 @font-face {
   font-family: "Opensans";
-  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  src: local("Open Sans"), url("./fonts/opensans.woff2") format("woff2"), url("./fonts/opensans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Opensans";
-  src: local("Open Sans"), local("Opensans-bold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  src: local("Open Sans"), local("Opensans-bold"), url("./fonts/opensansbold.woff2") format("woff2"), url("./fonts/opensansbold.woff") format("woff");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: "Opensans";
-  src: local("Open Sans"), local("Opensans-light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  src: local("Open Sans"), local("Opensans-light"), url("./fonts/opensanslight.woff2") format("woff2"), url("./fonts/opensanslight.woff") format("woff");
   font-weight: 300;
 }
 /* Section */
@@ -112,13 +112,13 @@
   height: 24px;
   background-color: inherit;
   border: none;
-  background-image: url("../img/open-menu-btn.svg");
+  background-image: url("./images/open-menu-btn.svg");
   padding: 0;
   cursor: pointer;
 }
 
 .download__wrap {
-  background: url("../img/back-mobile.jpg") center center no-repeat;
+  background: url("../images/back-mobile.jpg") center center no-repeat;
   background-size: cover;
   padding-top: 95px;
 }
@@ -163,13 +163,13 @@
   background-color: white;
 }
 .apps__link--ios::before {
-  background: url("../img/apple-logo.svg") center center no-repeat;
+  background: url("../images/apple-logo.svg") center center no-repeat;
 }
 .apps__link--android::before {
-  background: url("../img/android-logo.svg") center center no-repeat;
+  background: url("../images/android-logo.svg") center center no-repeat;
 }
 .apps__link--windows::before {
-  background: url("../img/microsoft-logo.svg") center center no-repeat;
+  background: url("../images/microsoft-logo.svg") center center no-repeat;
 }
 
 .apps__description {

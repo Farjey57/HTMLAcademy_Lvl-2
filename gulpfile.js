@@ -1,5 +1,7 @@
 const gulp = require("gulp"); /* Все пакеты, используемые в автоматизации. Они ставятся из npm */
 const plumber = require("gulp-plumber");
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant')
 const sourcemap = require("gulp-sourcemaps");
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
@@ -22,26 +24,47 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("./src/css"))
+    .pipe(gulp.dest('./dist/'))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
+/* Создание задачи для обработки фото */
+const images = () => {
+  return gulp.src("./src/img/*")
+    .pipe(imagemin({ //Сожмем их
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()],
+      interlaced: true
+    }))
+    .pipe(gulp.dest("./dist/images/"))
+    .pipe(sync.stream());
+}
+
+exports.images = images;
+
+const fonts = () => {
+  return gulp.src("./src/fonts/*")
+    .pipe(gulp.dest("./dist/fonts/"))
+    .pipe(sync.stream());
+}
+
+exports.fonts = fonts;
+
 // Server
 /*Сервер автоматически крутящийся*/
 
-const server = (done) => {
+const server = () => {
   sync.init({
     server: {
-      baseDir: 'src'
+      baseDir: './dist'
     },
-    port: 8080,
     cors: true,
     notify: false,
     ui: false,
   });
-  done();
 }
 
 exports.server = server;
@@ -51,12 +74,14 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("./src/**/*.scss", start); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
-  gulp.watch("./src/*.html").on("change", sync.reload);
+  gulp.watch("./src/images/*", start);
+  gulp.watch("./src/fonts/*", start);
+  gulp.watch("./dist/*.html").on("change", sync.reload);
 }
 
 /* запускает все по очереди если series. parallel - максимально параллельно */
 const start = gulp.parallel(
-  styles, server, watcher
+  styles, images, server, watcher, fonts
 );
 
 module.exports = {

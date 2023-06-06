@@ -8,12 +8,12 @@
         background-color: white;
     };
     &--ios::before {
-        background: url("../img/apple-logo.svg") center center no-repeat;
+        background: url("../images/apple-logo.svg") center center no-repeat;
     }
     &--android::before {
-        background: url("../img/android-logo.svg") center center no-repeat;
+        background: url("../images/android-logo.svg") center center no-repeat;
     }
     &--windows::before {
-        background: url("../img/microsoft-logo.svg") center center no-repeat;
+        background: url("../images/microsoft-logo.svg") center center no-repeat;
     }
 }
