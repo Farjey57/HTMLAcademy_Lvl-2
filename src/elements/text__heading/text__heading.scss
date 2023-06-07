@@ -1,9 +1,15 @@
 .text__heading {
     font-weight: 700;
     font-size: 18px;
-    color: #FFFFFF;
+    color: $white;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
     &--black {
-        color: #283645;
+        color: $black;
+    }
+    &--blue {
+        color: $blue;
     }
     &--small {
         font-size: 16px;

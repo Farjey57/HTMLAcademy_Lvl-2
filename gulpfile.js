@@ -19,7 +19,7 @@ const styles = () => {
   return gulp.src("./src/styles/index.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -73,9 +73,9 @@ exports.server = server;
 /* Отслеживает группы файлов*/ 
 
 const watcher = () => {
-  gulp.watch("./src/**/*.scss", start); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
-  gulp.watch("./src/images/*", start);
-  gulp.watch("./src/fonts/*", start);
+  gulp.watch("./src/**/*.scss", styles); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
+  gulp.watch("./src/img/*", images);
+  gulp.watch("./src/fonts/*", fonts);
   gulp.watch("./dist/*.html").on("change", sync.reload);
 }
 

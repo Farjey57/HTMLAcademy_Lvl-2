@@ -1,0 +1,16 @@
+.tariff__value {
+    min-width: 276px;
+    height: 59px;
+    background-color: $white;
+    border: 3px solid $grey;
+    &--yes {
+        background-image: url("./images/yes.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    };
+    &--no {
+        background-image: url("./images/no.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}

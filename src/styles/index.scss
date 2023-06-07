@@ -8,6 +8,9 @@
 @import "../sections/download/download.scss";
 @import "../sections/page-header/page-header.scss";
 @import "../sections/benifits/benifits.scss";
+@import "../sections/contacts/contacts.scss";
+@import "../sections/page-footer/page-footer.scss";
+@import "../sections/tariff/tariff.scss";
 
 /* blocks */
 @import "../blocks/text/text.scss";
@@ -36,6 +39,36 @@
 
 @import "../elements/benifits__header/benifits__header.scss";
 @import "../elements/benifits__slogan/benifits__slogan.scss";
-@import "../elements/benifits__list-wrap/benifits__list-wrap.scss"
+@import "../elements/benifits__list-wrap/benifits__list-wrap.scss";
+@import "../elements/benifits__list/benifits__list.scss";
+@import "../elements/benifits__title/benifits__title.scss";
+@import "../elements/benifits__image/benifits__image.scss";
 
+@import "../elements/reviews__list/reviews__list.scss";
+@import "../elements/reviews__title/reviews__title.scss";
+@import "../elements/reviews__toggles/reviews__toggles.scss";
+
+@import "../elements/slider__item/slider__item.scss";
+@import "../elements/slider__toggles/slider__toggles.scss";
+@import "../elements/slider__toggle/slider__toggle.scss";
+
+@import "../elements/tariff__wrap/tariff__wrap.scss";
+@import "../elements/tariff__toggles/tariff__toggles.scss";
+@import "../elements/tariff__table/tariff__table.scss";
+@import "../elements/tariff__column-head/tariff__column-head.scss";
+@import "../elements/tariff__line-head/tariff__line-head.scss";
+@import "../elements/tariff__value/tariff__value.scss";
+@import "../elements/tariff__line/tariff__line.scss";
+
+@import "../elements/contacts__info/contacts__info.scss";
+@import "../elements/contacts__link/contacts__link.scss";
+@import "../elements/contacts__head/contacts__head.scss";
+
+@import "../elements/map__frame/map__frame.scss";
+
+@import "../blocks/social-list/social-list.scss";
+@import "../elements/social-list__link/social-list__link.scss";
+
+@import "../elements/page-footer__social/page-footer__social.scss";
+@import "../elements/page-footer__copyright/page-footer__copyright.scss";
 

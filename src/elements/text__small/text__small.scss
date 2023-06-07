@@ -1,8 +1,8 @@
 .text__small {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
-    color: #283645;
-    &--spacing_none {
-        letter-spacing: 1em;
+    color: $blue;
+    &--spacing {
+        line-height: 2.1em;
     }
 }
