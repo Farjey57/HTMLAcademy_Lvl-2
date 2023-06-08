@@ -1,5 +1,7 @@
 .tariff__table {
     border-collapse: collapse;
-    margin-left: -51%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 50px;
 }

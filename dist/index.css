@@ -38,7 +38,9 @@
 }
 
 .page-footer {
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   padding: 40px 0;
 }
 
@@ -340,7 +342,9 @@
 
 .tariff__table {
   border-collapse: collapse;
-  margin-left: -51%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 50px;
 }
 

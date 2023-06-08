@@ -1,4 +1,6 @@
 .page-footer {
-    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     padding: 40px 0;
 }
