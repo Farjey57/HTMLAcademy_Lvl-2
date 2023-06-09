@@ -11,10 +11,12 @@
 
 <body class="page__body text">
     <header class="page-header">
+        <!--TODO calc(100wh-5px) left и топ убрать -->
         <a class="page-header__logo logo" href="index.html">
             <img class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK">
         </a>
         <button class="main-nav__burger" type="button">
+            <!--TODO бэкграунд кнопки-->
             <span class="visually-hidden">Открыть меню</span>
         </button>
         <nav class="main-nav" hidden>
@@ -64,6 +66,7 @@
                     Скачать Приложение
                 </button>
                 <ul class="apps__list">
+                    <!--TODO пути и паддинг у секции-->
                     <li class="apps__item">
                         <a class="apps__link apps__link--ios" href="#"></a>
                     </li>
@@ -172,6 +175,8 @@
             <h2 class="visually-hidden">Тарифы</h2>
             <div class="tariff__wrap slider">
                 <table class="tariff__table slider__table">
+                    <!--TODO наклон врапа 3 градуса. Можно сделать clip-path-->
+                    <!--TODO чтобы поправить бордеры, можно сделать подложку под таблицу-->
                     <thead class="tariff__thead">
                         <tr class="tariff__head">
                             <td class="tariff__column-head tariff__column-head--empty"></td>
@@ -221,11 +226,12 @@
         <section class="contacts">
             <h2 class="visually-hidden">Контакты</h2>
 
-            <p class="contacts__slogan text__normal text__normal--black">Остались вопросы? Свяжитесь с нами!</p>
+            <p class="contacts__slogan text__normal text__normal--black">Остались вопросы? Свяжитесь с нами!</p> 
 
             <address class="contacts__info">
                 <div class="contacts__item">
                     <h3 class="contacts__head text__heading text__heading--blue">Звоните:</h3>
+                    <!--TODO отступы-->
                     <a class="contacts__link text__normal text__normal--red" href="tel:+78125556666">+7 (812) 555-66-66</a>
                 </div>
                 <div class="contacts__item">
@@ -248,9 +254,10 @@
     </main>
 
     <footer class="page-footer">
+        
         <a class="page-footer__logo logo" href="index.html">
             <img class="logo__img" src="./images/logotype-blue-tablet.svg" alt="Приложение PINK">
-        </a>
+        </a><!--TODO поменять укартинку-->
         <ul class="page-footer__social social-list">
             <li class="social-list__item">
                 <a class="social-list__link social-list__link--twitter" href="#"></a>
@@ -264,6 +271,7 @@
         </ul>
         <a class="page-footer__copyright text__small" href="#">Разработано
         </a>
+        <!--TODO поменять марджин лефт поменять на gap-->
     </footer>
 
 </body>
