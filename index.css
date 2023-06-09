@@ -41,6 +41,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: center;
   padding: 40px 0;
 }
 
@@ -146,7 +147,7 @@
 }
 
 .download__wrap {
-  background: url("../images/back-mobile.jpg") center center no-repeat;
+  background: url("./images/back-mobile.jpg") center center no-repeat;
   background-size: cover;
   padding-top: 95px;
 }
