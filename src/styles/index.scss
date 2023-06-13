@@ -13,8 +13,10 @@
 @import "../sections/tariff/tariff.scss";
 
 /* blocks */
+@import "../blocks/page/page.scss";
 @import "../blocks/text/text.scss";
 @import "../blocks/visually-hidden/visually-hidden.scss";
+@import "../blocks/main-nav/main-nav.scss";
 @import "../blocks/logo/logo.scss";
 @import "../blocks/apps/apps.scss";
 @import "../blocks/button/button.scss";
@@ -24,8 +26,8 @@
 @import "../elements/text__heading/text__heading.scss";
 @import "../elements/text__normal/text__normal.scss";
 @import "../elements/text__small/text__small.scss";
-@import "../elements/page__body/page__body.scss";
-@import "../elements/main-nav__burger/main-nav__burger.scss";
+
+@import "../elements/burger/burger.scss";
 
 @import "../elements/download__wrap/download__wrap.scss";
 @import "../elements/download__title/download__title.scss";
