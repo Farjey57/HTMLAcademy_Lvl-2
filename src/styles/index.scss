@@ -13,6 +13,7 @@
 @import "../sections/tariff/tariff.scss";
 
 /* blocks */
+@import "../blocks/container/container.scss";
 @import "../blocks/page/page.scss";
 @import "../blocks/text/text.scss";
 @import "../blocks/visually-hidden/visually-hidden.scss";
@@ -28,16 +29,6 @@
 @import "../elements/text__small/text__small.scss";
 
 @import "../elements/burger/burger.scss";
-
-@import "../elements/download__wrap/download__wrap.scss";
-@import "../elements/download__title/download__title.scss";
-@import "../elements/download__demo/download__demo.scss";
-@import "../elements/download__choise/download__choise.scss";
-
-@import "../elements/apps__button/apps__button.scss";
-@import "../elements/apps__list/apps__list.scss";
-@import "../elements/apps__link/apps__link.scss";
-@import "../elements/apps__description/apps__description.scss";
 
 @import "../elements/benifits__header/benifits__header.scss";
 @import "../elements/benifits__slogan/benifits__slogan.scss";

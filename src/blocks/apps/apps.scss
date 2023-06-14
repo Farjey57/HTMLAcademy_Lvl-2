@@ -1,4 +1,39 @@
 .apps {
-    
     background-color: #1D2631;
+    margin-bottom: 35px;
+    margin-top: 28px;
+    row-gap: 30px;
+    &__button {
+        width: 280px;
+    };
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 35px;
+    };
+    &__link {
+        display: block;
+        &::before {
+            content: '';
+            width: 47px;
+            height: 56px;
+            display: block;
+            background-color: white;
+        };
+        &--ios::before {
+            background: url("./images/apple-logo.svg") center center no-repeat;
+        }
+        &--android::before {
+            background: url("./images/android-logo.svg") center center no-repeat;
+        }
+        &--windows::before {
+            background: url("./images/microsoft-logo.svg") center center no-repeat;
+        }
+    };
+    &__description {
+        margin: 0;
+    }
 }
