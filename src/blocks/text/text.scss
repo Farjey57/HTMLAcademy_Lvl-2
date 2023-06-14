@@ -1,4 +1,50 @@
 .text {
     font-family: "Opensans", Arial, sans-serif;
     line-height: 1.5;
+    &__small {
+        font-weight: 400;
+        font-size: 14px;
+        color: $blue;
+        line-height: 1.7em;
+        &--spacing {
+            line-height: 2.1em;
+        }
+    };
+    &__normal {
+        font-weight: 300;
+        font-size: 24px;
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+        font-style: normal;
+        &--black {
+            color: #283645;
+        }
+        &--red {
+            color: #D22856;
+        }
+        &--medium {
+            font-size: 18px;
+        }
+        &--small {
+            font-size: 14px;
+        }
+    };
+    &__heading {
+        font-weight: 700;
+        font-size: 18px;
+        color: $white;
+        text-align: center;
+        font-style: normal;
+        text-decoration: none;
+        &--black {
+            color: $black;
+        }
+        &--blue {
+            color: $blue;
+        }
+        &--small {
+            font-size: 16px;
+        }
+    }
 }

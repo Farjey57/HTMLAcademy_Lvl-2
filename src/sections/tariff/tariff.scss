@@ -1,4 +1,78 @@
 .tariff {
     overflow: hidden;
     position: relative;
+    &__wrap {
+        padding-top: 100px;
+        padding-bottom: 45px;
+        overflow: hidden;
+    };
+
+    &__table {
+        border-collapse: collapse;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    };
+
+    &__toggles {
+        margin-top: 40px;
+    };
+
+    &__column-head {
+        background-color: $blue;
+        border-left: 3px solid $grey;
+        text-align: center;
+        height: 94px;
+        & .tariff__text:nth-child(1) {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        & .tariff__text:nth-child(2) {
+            margin: 0;
+        }
+        &:nth-child(2) {
+            border-left: 3px solid $blue;
+            
+        }
+        &:last-child {
+            border-right: 3px solid $blue;
+        }
+        &--empty {
+            background-color: inherit;
+            display: none;
+        }
+        &--special::before {
+            content: '';
+            
+        }
+    };
+
+    &__line {
+        & .tariff__value:nth-child(n+1) {
+            border-top: 3px solid $blue;
+        }
+    };
+
+    &__line-head {
+        display: none;
+    };
+
+    &__value {
+        min-width: 276px;
+        height: 59px;
+        background-color: $white;
+        border: 3px solid $grey;
+        &--yes {
+            background-image: url("./images/yes.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        };
+        &--no {
+            background-image: url("./images/no.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    };
+
+
 }
