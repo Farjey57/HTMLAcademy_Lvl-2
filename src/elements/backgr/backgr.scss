@@ -1,8 +1,4 @@
-.benifits__list-wrap {
-    position: relative;
-    z-index: 1;
-    padding-top: 60px;
-  
+.backgr {
     &:before,
     &:after {
         background: $greyback;
@@ -24,5 +20,9 @@
     
     &:after {
         bottom: 0;
+    }
+
+    &--deg3:before {
+        transform: skewY(-3deg);
     }
 }

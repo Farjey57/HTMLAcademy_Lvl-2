@@ -1,3 +1,45 @@
 .benifits {
-    
+    padding-top: 46px;
+    &__header {
+
+    };
+    &__slogan {
+        margin: 0 0 30px;
+    };
+    &__list-wrap {
+        position: relative;
+        z-index: 1;
+        padding-top: 85px;
+    };
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+        overflow: hidden;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    };
+    &__title {
+        margin-top: 0;
+    };
+    &__item-img{
+        min-height: 230px;
+        position: relative;
+    };
+    &__image {
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        position: absolute;
+        left:50%;
+        bottom: -45px;
+        transform:translateX(-50%);
+        object-fit: contain;
+    };
 }
