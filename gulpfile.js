@@ -118,5 +118,5 @@ const build = gulp.series(
 );
 
 module.exports = {
-  start, buiild
-}
+  start, build
+};
