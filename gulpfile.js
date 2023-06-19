@@ -7,13 +7,25 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+/*
+const csso = require('gulp-csso');
+const rename = require('rename');
+const webp = require('gulp-webp');
+*/
+/*
+npm install gulp-csso --save-dev оптимизация css 
+npm i gulp-rename переименовать фал в style.min.css
+npm i gulp-webp 
+gulp-svgstore для объединения иконок в спрайт
+*/
 
 // Styles
 /*  главный файл scss, который выидит сборщик. Это уже собранный файл
  plumber() - отлавливает ошибки
  sourcemap.init() - показывает пути до файлов (из какого файла свойство)
  sass() - обрабатывается sass в css
- sync.stream() - локальная перезагрузка сервера*/
+ sync.stream() - локальная перезагрузка сервера
+ */
 
  /*Задача которая называется styles*/
 const styles = () => {
@@ -24,7 +36,11 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
+    /*
+    .pipe(csso())
+    .pipe(rename("main/text/ciao/goodbye.md"))
+    */
+    .pipe(sourcemap.write(".")) /*"."Путь куда сохранять*/
     .pipe(gulp.dest('./dist/'))
     .pipe(sync.stream());
 }
@@ -46,6 +62,18 @@ const images = () => {
 
 exports.images = images;
 
+/*
+const webp = () => {
+  return gulp.src("./src/img/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("./dist/images/"))
+}
+
+exports.webp = webp;
+*/
+
+
+
 const fonts = () => {
   return gulp.src("./src/fonts/*")
     .pipe(gulp.dest("./dist/fonts/"))
@@ -63,8 +91,8 @@ const server = () => {
       baseDir: './dist'
     },
     cors: true,
-    notify: false,
-    ui: false,
+    notify: false, /*Отключает уведомления*/
+    ui: false, /*Настройка сервера прямо в браузере*/
   });
 }
 
@@ -82,9 +110,13 @@ const watcher = () => {
 
 /* запускает все по очереди если series. parallel - максимально параллельно */
 const start = gulp.parallel(
-  styles, images, server, watcher, fonts
+  server, watcher
+);
+
+const build = gulp.series(
+  styles, images, fonts
 );
 
 module.exports = {
-  start
+  start, buiild
 }
