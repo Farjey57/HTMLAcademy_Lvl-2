@@ -4,7 +4,10 @@
   "description": "первая сборка",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",

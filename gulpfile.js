@@ -15,6 +15,7 @@ const sync = require("browser-sync").create();
  sass() - обрабатывается sass в css
  sync.stream() - локальная перезагрузка сервера*/
 
+ /*Задача которая называется styles*/
 const styles = () => {
   return gulp.src("./src/styles/index.scss")
     .pipe(plumber())
