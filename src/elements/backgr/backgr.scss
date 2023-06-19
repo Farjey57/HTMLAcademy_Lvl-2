@@ -1,0 +1,28 @@
+.backgr {
+    &:before,
+    &:after {
+        background: $greyback;
+        content: '';
+        display: block;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    &:before {
+        top: 0px;
+        transform: skewY(-6deg);
+        transform-origin: 100% 0;
+    }
+    
+    &:after {
+        bottom: 0;
+    }
+
+    &--deg3:before {
+        transform: skewY(-3deg);
+    }
+}

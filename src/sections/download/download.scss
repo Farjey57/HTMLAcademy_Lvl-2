@@ -1,0 +1,20 @@
+.download {
+    &__wrap {
+        background: url('./images/back-mobile.jpg') center center no-repeat;
+        background-size: cover;
+        padding-top: 66px;
+    }
+    &__title {
+        margin-bottom: 35px;
+        margin-top: 30px;
+    };
+    &__demo {
+        display: block;
+        margin: 0 auto;
+    };
+    &__choise {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    };
+}

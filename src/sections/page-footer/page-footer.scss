@@ -1,0 +1,28 @@
+.page-footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    row-gap: 40px;
+
+    &__social {
+        padding: 0;
+    };
+    &__copyright {
+        font-style: normal;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: '';
+            display: block;
+            width: 27px;
+            height: 34px;
+            background: url('./images/htmlacademy.svg') center no-repeat;
+            margin-left: 15px;
+        }
+    };
+}

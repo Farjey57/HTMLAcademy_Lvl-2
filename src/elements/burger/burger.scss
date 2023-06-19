@@ -1,0 +1,19 @@
+.burger {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    z-index: 5000;
+    min-width: 50px;
+    display: flex;
+    flex-flow: column;
+    row-gap: 6px;
+    align-items: center;
+    padding: 0;
+    &__line {
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: 1px;
+    }
+}
