@@ -1,14 +1,58 @@
 .page-header {
     width: 100vw;
-    height: 66px;
     position: fixed;
-    background: rgb(0,0,0,0.3);
+    background-color: rgb(0,0,0,0.3);
     z-index: 2;
-    display: flex;
     left: 0;
     top: 0;
-    justify-content: space-between;
-    align-items: center;
     box-sizing: border-box;
     overflow: hidden;
+
+    &__plank {
+        display: flex;
+        border: none;
+        height: 66px;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;   
+    }
+
+    &--opened {
+        background-color: $blue;
+    }
+
+    &--opened &__plank{ 
+        height: 69px;
+        border-bottom: solid 1px $black;
+    }
+
+    &--opened .main-nav{
+        display: block;
+    }
+
+    &--opened .burger {
+        min-width: initial;
+        width: 23px;
+        height: 23px;
+        display: block;
+        margin-right: 3px;
+    }
+
+    &--opened .burger__line {
+        width: 100%;
+        border-radius: 0;
+        transition: 0.2s;
+    }
+
+    &--opened .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &--opened .burger__line:nth-child(1) {
+        transform: rotate(45deg) translate(25%, 0px);
+    }
+
+    &--opened .burger__line:nth-child(3) {
+        transform: rotate(-45deg) translate(25%, 0px);
+    }
 }

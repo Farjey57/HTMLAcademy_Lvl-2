@@ -6,4 +6,13 @@
     cursor: pointer;
     text-align: center;
     padding: 15px 0;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $white;
+        color: $red;
+    }
+    &:active {
+        color: #F2BFCC;
+    }
 }

@@ -18,10 +18,11 @@
 }
 /* elements */
 .burger {
+  position: relative;
   border: none;
   cursor: pointer;
   background: transparent;
-  z-index: 5000;
+  z-index: 5;
   min-width: 50px;
   display: flex;
   flex-flow: column;
@@ -29,12 +30,19 @@
   align-items: center;
   padding: 0;
 }
+.burger:hover .burger__line {
+  background-color: #D22856;
+}
+.burger:active .burger__line {
+  opacity: 0.3;
+}
 .burger__line {
   width: 100%;
   height: 4px;
   background-color: #FFFFFF;
   box-sizing: border-box;
   border-radius: 1px;
+  transition: 0.2s;
 }
 
 .backgr:before, .backgr:after {
@@ -131,6 +139,37 @@
   position: absolute;
 }
 
+.main-nav {
+  width: 100%;
+  display: none;
+}
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav__item {
+  height: 63px;
+  border-bottom: solid 1px #000000;
+  border-top: solid 1px rgba(255, 255, 255, 0.15);
+}
+.main-nav__link {
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  padding: 18px 0;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.main-nav__link:hover {
+  color: #D22856;
+}
+.main-nav__link:active {
+  opacity: 0.3;
+}
+
 .slider__item {
   display: none;
 }
@@ -220,6 +259,14 @@
   cursor: pointer;
   text-align: center;
   padding: 15px 0;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: #FFFFFF;
+  color: #D22856;
+}
+.button:active {
+  color: #F2BFCC;
 }
 
 .social-list {
@@ -279,17 +326,52 @@
 
 .page-header {
   width: 100vw;
-  height: 66px;
   position: fixed;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
-  display: flex;
   left: 0;
   top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.page-header__plank {
+  display: flex;
+  border: none;
+  height: 66px;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  overflow: hidden;
+}
+.page-header--opened {
+  background-color: #283645;
+}
+.page-header--opened .page-header__plank {
+  height: 69px;
+  border-bottom: solid 1px #000000;
+}
+.page-header--opened .main-nav {
+  display: block;
+}
+.page-header--opened .burger {
+  min-width: initial;
+  width: 23px;
+  height: 23px;
+  display: block;
+  margin-right: 3px;
+}
+.page-header--opened .burger__line {
+  width: 100%;
+  border-radius: 0;
+  transition: 0.2s;
+}
+.page-header--opened .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.page-header--opened .burger__line:nth-child(1) {
+  transform: rotate(45deg) translate(25%, 0px);
+}
+.page-header--opened .burger__line:nth-child(3) {
+  transform: rotate(-45deg) translate(25%, 0px);
 }
 
 .benifits {

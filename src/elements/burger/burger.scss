@@ -1,19 +1,29 @@
 .burger {
+    position: relative;
     border: none;
     cursor: pointer;
     background: transparent;
-    z-index: 5000;
+    z-index: 5;
     min-width: 50px;
     display: flex;
     flex-flow: column;
     row-gap: 6px;
     align-items: center;
     padding: 0;
+    &:hover &__line{
+        background-color: $red;
+    }
+
+    &:active &__line{
+        opacity: 0.3;
+    }
+
     &__line {
         width: 100%;
         height: 4px;
         background-color: $white;
         box-sizing: border-box;
         border-radius: 1px;
+        transition: 0.2s;
     }
 }
