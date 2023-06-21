@@ -39,7 +39,6 @@
     }
 
     &--opened .burger__line {
-        width: 100%;
         border-radius: 0;
         transition: 0.2s;
     }
@@ -49,10 +48,10 @@
     }
 
     &--opened .burger__line:nth-child(1) {
-        transform: rotate(45deg) translate(25%, 0px);
+        transform: translate(0, 8px) rotate(45deg) ;
     }
 
     &--opened .burger__line:nth-child(3) {
-        transform: rotate(-45deg) translate(25%, 0px);
+        transform: translate(0, 0px) rotate(-45deg) ;
     }
 }

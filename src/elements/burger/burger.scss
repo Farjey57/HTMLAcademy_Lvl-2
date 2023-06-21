@@ -10,6 +10,7 @@
     row-gap: 6px;
     align-items: center;
     padding: 0;
+    user-select: none;
     &:hover &__line{
         background-color: $red;
     }
@@ -25,5 +26,6 @@
         box-sizing: border-box;
         border-radius: 1px;
         transition: 0.2s;
+        user-select: none;
     }
 }
