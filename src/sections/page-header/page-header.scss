@@ -64,4 +64,11 @@
             height: 109px;
         }
     }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        overflow: visible;
+        position: relative;
+        max-width: 1200px;
+        margin-bottom: -110px;
+    }
 }

@@ -3,4 +3,9 @@
         display: block;
         clip-path: polygon(0% 0%, 50% 15%, 100% 0%, 100% 100%, 0% 100%);
     }
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        &__frame {
+            height: 374px;
+        }
+    }
 }

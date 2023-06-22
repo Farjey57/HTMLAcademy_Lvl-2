@@ -25,4 +25,9 @@
             margin-left: 15px;
         }
     };
+
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        flex-flow: row;
+        justify-content: space-between;
+    }
 }

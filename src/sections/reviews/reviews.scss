@@ -10,6 +10,9 @@
         margin: 0;
         text-align: center;
     };
+    &__item {
+        
+    }
     &__title {
         margin: 0 0 20px;
     };
@@ -17,4 +20,28 @@
         @include pos-center;
         bottom: 0;
     };
+    &__info {
+        display: none;
+    }
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        padding-top: 90px;
+        &__item {
+            display: flex;
+            flex-flow: column;
+        }
+        &__title{
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+        &__text {
+            order: -1;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        &__info {
+            display: block;
+            margin-top: 10px;
+        }
+    }
 }
