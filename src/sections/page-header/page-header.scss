@@ -48,10 +48,10 @@
     }
 
     &--opened .burger__line:nth-child(1) {
-        transform: translate(0, 8px) rotate(45deg) ;
+        transform: translate(0, 4px) rotate(45deg) ;
     }
 
     &--opened .burger__line:nth-child(3) {
-        transform: translate(0, 0px) rotate(-45deg) ;
+        transform: translate(0, -4px) rotate(-45deg) ;
     }
 }

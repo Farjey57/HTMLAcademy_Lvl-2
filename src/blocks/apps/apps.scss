@@ -5,6 +5,7 @@
     row-gap: 30px;
     &__button {
         width: 100%;
+        max-width: 280px;
     };
     &__list {
         margin: 0;
@@ -16,12 +17,20 @@
     };
     &__link {
         display: block;
+        transition: 0.1s ease-out;
+        &:hover {
+            transform: scale(1.15);
+        }
+        &:active {
+            transform: scale(0.9);
+        }
         &::before {
             content: '';
             width: 47px;
             height: 56px;
             display: block;
             background-color: white;
+            
         };
         &--ios::before {
             background: url("./images/apple-logo.svg") center center no-repeat;

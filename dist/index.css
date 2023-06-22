@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global */
 @font-face {
   font-family: "Opensans";
@@ -20,6 +21,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/*Передаем property= параметр условия, Breakpoint= значение условия*/
 /* elements */
 .burger {
   position: relative;
@@ -157,6 +159,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: 1s ease width;
 }
 .main-nav__item {
   height: 63px;
@@ -171,7 +174,7 @@
   width: 100%;
   padding: 18px 0;
   text-transform: uppercase;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .main-nav__link:hover {
   color: #D22856;
@@ -180,11 +183,24 @@
   opacity: 0.3;
 }
 
+.slider {
+  position: relative;
+}
 .slider__item {
-  display: none;
+  width: 100%;
+  transition: 0.5s ease-in;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  transform: translateX(-50%);
 }
 .slider__item--active {
-  display: block;
+  opacity: 1;
+  position: static;
+  transform: translateX(0);
+  transition: 0.5s ease-in;
 }
 .slider__toggles {
   display: flex;
@@ -203,6 +219,8 @@
   opacity: 0.3;
   border: 0;
   border-radius: 6px;
+  transition: 0.1s;
+  transform: scale(0.9);
 }
 .slider__toggle--current {
   box-sizing: content-box;
@@ -229,6 +247,7 @@
 }
 .apps__button {
   width: 100%;
+  max-width: 280px;
 }
 .apps__list {
   margin: 0;
@@ -240,6 +259,13 @@
 }
 .apps__link {
   display: block;
+  transition: 0.1s ease-out;
+}
+.apps__link:hover {
+  transform: scale(1.15);
+}
+.apps__link:active {
+  transform: scale(0.9);
 }
 .apps__link::before {
   content: "";
@@ -268,8 +294,8 @@
   box-sizing: border-box;
   cursor: pointer;
   text-align: center;
-  padding: 15px 0;
-  transition: 0.2s;
+  padding: 14px 14px;
+  transition: 0.1s;
 }
 .button:hover {
   background-color: #FFFFFF;
@@ -378,10 +404,10 @@
   opacity: 0;
 }
 .page-header--opened .burger__line:nth-child(1) {
-  transform: translate(0, 8px) rotate(45deg);
+  transform: translate(0, 4px) rotate(45deg);
 }
 .page-header--opened .burger__line:nth-child(3) {
-  transform: translate(0, 0px) rotate(-45deg);
+  transform: translate(0, -4px) rotate(-45deg);
 }
 
 .benifits {
@@ -432,6 +458,9 @@
   padding-top: 45px;
   padding-bottom: 35px;
 }
+.reviews__wrap {
+  padding-bottom: 37px;
+}
 .reviews__list {
   list-style: none;
   padding: 0;
@@ -442,7 +471,10 @@
   margin: 0 0 20px;
 }
 .reviews__toggles {
-  margin-top: 37px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
 }
 
 .contacts {

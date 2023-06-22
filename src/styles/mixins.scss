@@ -1,0 +1,25 @@
+@mixin pos-center-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+};
+
+@mixin pos-center{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+};
+
+/*Передаем property= параметр условия, Breakpoint= значение условия*/
+@mixin breakpoint($property: max-width, $breakpoint: 100%) {
+    @media only screen and (#{$property}: $breakpoint){
+    @content
+    }
+};
+
+@mixin hover {
+    &:not([disabled]):hover {
+    @content;
+    }
+};

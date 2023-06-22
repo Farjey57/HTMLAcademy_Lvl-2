@@ -1,8 +1,9 @@
 /* Global */
+@import "../styles/breakpoints.scss";
 @import "../styles/fonts.scss";
 @import "../styles/base.scss";
-@import "../styles/breakpoints.scss";
 @import "../styles/colors.scss";
+@import "../styles/mixins.scss";
 
 /* elements */
 @import "../elements/burger/burger.scss";
