@@ -15,7 +15,7 @@
             <a class="page-header__logo logo" href="index.html">
                 <picture> <!--Для кадрирования изображения. Исчезающий тег, для браузера его как будто бы нет. стили на img-->
                     <!--Загрузит c для 600px a для 1200px-->
-                    <source media="(min-width:1200px)" srcset="a.png">
+                    <source media="(min-width:1200px)" srcset="./images/logotype-desktop.svg">
                     <source media="(min-width:660px)" srcset="./images/logotype-tablet.svg">
                     <img class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK">
                 </picture>
@@ -162,6 +162,8 @@
         </section>
 
         <section class="reviews container">
+            <h2 class="visually-hidden">Отзывы
+            </h2>
             <div class="reviews__wrap slider">
                 <ul class="reviews__list slider__list">
                     <li class="reviews__item slider__item slider__item--active">
@@ -170,6 +172,7 @@
                         <p class="reviews__text text__small text__small--spacing">
                             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
                         </p>
+                        <p class="reviews__info text__small">25 лет, водитель трамвая</p>
                     </li>
                     <li class="reviews__item slider__item">
                         <h2 class="reviews__title text__heading text__heading--black">Фаина Раневская
@@ -177,6 +180,7 @@
                         <p class="reviews__text text__small text__small--spacing">
                             «Я влaдeлeц интepнeт-издaтeльcтвa и пeчaтaю в ocнoвнoм нaучныe тpуды. Нecмoтpя нa чиcлo пocтoяннo публикующиxcя aвтopoв кoнкуpeнция выcoкaя, мнe нужнo былo чтoбы мoй caйт»
                         </p>
+                        <p class="reviews__info text__small">25 лет, водитель трамвая</p>
                     </li>
                     <li class="reviews__item slider__item">
                         <h2 class="reviews__title text__heading text__heading--black">Алексей Шалода
@@ -184,6 +188,7 @@
                         <p class="reviews__text text__small text__small--spacing">
                             «а пять лет, которые я пользовался платформой, количество действий при публикации отзыва постоянно увеличивалось. Появилось множество вопросов и всяческих уточнений. Вот так вот!»
                         </p>
+                        <p class="reviews__info text__small">25 лет, водитель трамвая</p>
                     </li>
                 </ul>
                 <div class="reviews__toggles slider__toggles">
@@ -199,7 +204,6 @@
             <h2 class="visually-hidden">Тарифы</h2>
             <div class="tariff__wrap backgr backgr--deg3 slider">
                 <table class="tariff__table slider__table">
-                    <!--TODO наклон врапа 3 градуса. Можно сделать clip-path-->
                     <!--TODO чтобы поправить бордеры, можно сделать подложку под таблицу-->
                     <thead class="tariff__thead">
                         <tr class="tariff__head">
@@ -220,19 +224,19 @@
                     </thead>
                     <tbody class="tariff__table-body">
                         <tr class="tariff__line">
-                            <td class="tariff__line-head tariff__text--line-head">Розовый фильтр</td>
+                            <td class="tariff__value tariff__line-head text__small">Розовый фильтр</td>
                             <td class="tariff__value tariff__value--yes"></td>
                             <td class="tariff__value tariff__value--yes"></td>
                             <td class="tariff__value tariff__value--yes"></td>
                         </tr>
                         <tr class="tariff__line">
-                            <td class="tariff__line-head tariff__text--line-head">Смайлики</td>
+                            <td class="tariff__value tariff__line-head text__small">Смайлики</td>
                             <td class="tariff__value tariff__value--no"></td>
                             <td class="tariff__value tariff__value--yes"></td>
                             <td class="tariff__value tariff__value--yes"></td>
                         </tr>
                         <tr class="tariff__line">
-                            <td class="tariff__line-head tariff__text--line-head">Комментарии</td>
+                            <td class="tariff__value tariff__line-head text__small">Комментарии</td>
                             <td class="tariff__value tariff__value--no"></td>
                             <td class="tariff__value tariff__value--no"></td>
                             <td class="tariff__value tariff__value--yes"></td>
@@ -250,7 +254,7 @@
         <section class="contacts container">
             <h2 class="visually-hidden">Контакты</h2>
 
-            <p class="contacts__slogan text__normal text__normal--black">Остались вопросы? Свяжитесь с нами!</p> 
+            <p class="contacts__slogan text__normal text__normal--black">Остались вопросы?<br> Свяжитесь с нами!</p> 
 
             <address class="contacts__info">
                 <div class="contacts__item">
@@ -272,7 +276,7 @@
         
         <section class="map">
             <h2 class="visually-hidden">Геолокация</h2>
-            <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2c57e8af71eb0c4752b840a7394f974ce39241eaa636dbbe5f55219fae6bae5&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
+            <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2c57e8af71eb0c4752b840a7394f974ce39241eaa636dbbe5f55219fae6bae5&amp;source=constructor" width="100%" height="200px" frameborder="0"></iframe>
         </section>
 
     </main>
