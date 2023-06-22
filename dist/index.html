@@ -13,7 +13,13 @@
     <header class="page-header">
         <div class="page-header__plank container">
             <a class="page-header__logo logo" href="index.html">
-                <img class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK">
+                <picture> <!--Для кадрирования изображения. Исчезающий тег, для браузера его как будто бы нет. стили на img-->
+                    <!--Загрузит c для 600px a для 1200px-->
+                    <source media="(min-width:1200px)" srcset="a.png">
+                    <source media="(min-width:660px)" srcset="./images/logotype-tablet.svg">
+                    <img class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK">
+                </picture>
+                
             </a>
             <button class="main-nav__burger burger" type="button">
                 <div class="burger__line"></div>
@@ -56,7 +62,12 @@
                 <h2 class="download__title text__normal">
                     Взгляните на жизнь<br>иначе!
                 </h2>
-                <img class="download__demo" src="./images/phone-screen-group.png" alt="Пример использования приложения с наложением розового фона">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="./images/phone-screen-group-desktop.png">
+                    <source media="(min-width:660px)" srcset="./images/phone-screen-group-tablet.png">
+                    <img class="download__demo" src="./images/phone-screen-group.png" alt="Пример использования приложения с наложением розового фона">
+                </picture>
+                
             </div>
             
             <div class="download__choise apps container">
@@ -124,7 +135,11 @@
     
                 <ul class="benifits__list">
                     <li class="benifits__item-img">
-                        <img class="benifits__image" src="./images/benifits-screen-1.png" alt="Пример использования приложения с наложением розового фона" height="275px" width="157px">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="a.png">
+                            <source media="(min-width:660px)" srcset="./images/iphone-screen-3-tablet.png" height="547px" width="268px">
+                            <img class="benifits__image" src="./images/benifits-screen-1.png" alt="Пример использования приложения с наложением розового фона" height="275px" width="157px">
+                        </picture>
                     </li>
                     <li class="benifits__item-img" hidden>
                         <img class="benifits__image" src="" alt="Пример использования приложения с наложением розового фона">
@@ -135,6 +150,15 @@
                 </ul>
             </div>
             
+        </section>
+
+        <section class="research container">
+            <img class="research__img" src="./images/research-img.svg" alt="Картинка с изображением часов, 24 часа" width="238px" height="276px">
+            <div class="research__wrap">
+                <h2 class="research__title text__heading text__heading--black text__heading--big">Эффект<br>на 24 часа!</h2>
+                <p class="research__text text__small">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                <a class="research__link" href="#">Узнать больше об исследовании</a>
+            </div>
         </section>
 
         <section class="reviews container">
@@ -276,6 +300,7 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/slider-table.js"></script>
 </body>
 
 </html>

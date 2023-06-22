@@ -45,4 +45,16 @@
     &__description {
         margin: 0;
     }
+
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        row-gap: 35px;
+        &__button {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+    }
 }

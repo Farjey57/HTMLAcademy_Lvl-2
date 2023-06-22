@@ -14,21 +14,27 @@
             content: '';
             width: 48px;
             height: 48px;
-        }
+        };
         &--twitter::before {
             background-image: url('./images/twitter.svg');
             background-repeat: no-repeat;
             background-position: center;
-        }
+        };
         &--facebook::before {
             background-image: url('./images/facebook.svg');
             background-repeat: no-repeat;
             background-position: center;
-        }
+        };
         &--youtube::before {
             background-image: url('./images/youtube.svg');
             background-repeat: no-repeat;
             background-position: center;
-        }
+        };
+        &:hover {
+            border-color: $blue;
+        };
+        &:active {
+            opacity: 0.1;
+        };
     };
 }

@@ -1,0 +1,33 @@
+.research {
+    display: none;
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        display: flex;
+        padding-top: 54px;
+        justify-content: space-between;
+        &__img {
+            
+        }
+        &__wrap {
+            width: 50%;
+            padding-top: 15px;
+        }
+        &__title {
+            text-align: left;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-bottom: 20px;
+        } 
+        &__link {
+            color: $red;
+            &:hover {
+                color: $blue;
+            }
+            &:active {
+                opacity: 0.3;
+            }
+        }
+    }
+    
+}

@@ -3,7 +3,7 @@
     position: relative;
     &__wrap {
         padding-top: 100px;
-        padding-bottom: 45px;
+        padding-bottom: 57px;
         overflow: hidden;
     };
 
@@ -12,10 +12,14 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        transition: 0.5s ease-in-out;
+        margin-bottom: 42px;
     };
 
     &__toggles {
-        margin-top: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
     };
 
     &__column-head {
@@ -31,8 +35,7 @@
             margin: 0;
         }
         &:nth-child(2) {
-            border-left: 3px solid $blue;
-            
+            border-left: 3px solid $blue;  
         }
         &:last-child {
             border-right: 3px solid $blue;
@@ -58,7 +61,7 @@
     };
 
     &__value {
-        min-width: 276px;
+        min-width: 87.5vw;
         height: 59px;
         background-color: $white;
         border: 3px solid $grey;

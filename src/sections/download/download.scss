@@ -1,4 +1,5 @@
 .download {
+    position: relative;
     &__wrap {
         background: url('./images/back-mobile.jpg') center center no-repeat;
         background-size: cover;
@@ -18,4 +19,28 @@
         flex-flow: column;
         align-items: center;
     };
+
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        &__wrap {
+            padding-top: 184px;
+        }
+        &__title{
+            width: 300px;
+            position: absolute;
+            margin-top: 0;
+            margin-left: 20px;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+        &__demo {
+            margin-right: 0;
+        }
+        &__choise {
+            position: absolute;
+            bottom: 80px;
+            background: none;
+            width: 300px;
+        }
+    }
 }

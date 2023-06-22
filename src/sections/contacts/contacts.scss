@@ -22,5 +22,13 @@
     &__link {
         margin: 0;
         overflow-wrap: anywhere;
+        &[href]:hover {
+            color: $blue;
+            text-decoration-line: underline;
+        };
+        &[href]:active {
+            opacity: 0.3;
+            text-decoration-line: none;
+        };
     };
 }

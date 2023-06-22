@@ -1,8 +1,5 @@
 .benifits {
     padding-top: 46px;
-    &__header {
-
-    };
     &__slogan {
         margin: 0 0 30px;
     };
@@ -27,6 +24,7 @@
     };
     &__title {
         margin-top: 0;
+        margin-bottom: 16px;
     };
     &__item-img{
         min-height: 230px;
@@ -35,11 +33,50 @@
     &__image {
         display: block;
         margin: 0 auto;
-        overflow: hidden;
         position: absolute;
         left:50%;
         bottom: -45px;
         transform:translateX(-50%);
         object-fit: contain;
     };
+
+    @include breakpoint (min-width, $tablet-width-Breakpoint){
+        padding-top: 56px;
+        overflow: hidden;
+        &__slogan {
+            margin: 0;
+            font-weight: 300;
+        font-size: 40px;
+        line-height: 1.35;
+        }
+        &__slogan:nth-child(2) br{
+            display: none;
+        }
+        &__list-wrap {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-top: 28px;
+        }
+        &__list {
+            width: 50%;
+            overflow: visible;
+            &:nth-child(1) {
+                margin-bottom: 0;
+                margin-top: 54px;
+                gap: 25px;
+                text-align: left;
+            }
+        }
+        &__title {
+            text-align: left;
+        }
+        &__item-img {
+            min-height: 480px;
+        }
+        &__image {
+           bottom: initial;
+           top: 0px;
+        }
+    }
+    
 }
