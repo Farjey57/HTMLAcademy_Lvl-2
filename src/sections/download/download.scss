@@ -22,6 +22,7 @@
 
     @include breakpoint (min-width, $tablet-width-Breakpoint) {
         &__wrap {
+            background-image: url('./images/back-tablet.jpg');
             padding-top: 184px;
         }
         &__title{

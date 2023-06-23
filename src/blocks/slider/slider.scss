@@ -69,11 +69,12 @@
         }
     };
     &__btn {
-        width: 22px;
-        height: 41px;
+        width: 60px;
+        height: 60px;
+        z-index: 5;
         border: none;
         cursor: pointer;
-        background: url('./images/icon-arrow.svg') center no-repeat;
+        background: url('./images/icon-arrow.svg') center right no-repeat;
         margin: 0;
         padding: 0;
         opacity: 0.3;

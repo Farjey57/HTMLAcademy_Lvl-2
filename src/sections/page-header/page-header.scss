@@ -1,6 +1,8 @@
 .page-header {
     width: 100vw;
     position: fixed;
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(0,0,0,0.3);
     z-index: 2;
     left: 0;
@@ -9,9 +11,8 @@
     overflow: hidden;
 
     &__plank {
+        width: 100%;
         display: flex;
-        border: none;
-        height: 66px;
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box; 
@@ -21,8 +22,11 @@
         background-color: $blue;
     }
 
-    &--opened &__plank{ 
+    &__plank{ 
         height: 69px;
+    }
+
+    &--opened &__plank{ 
         border-bottom: solid 1px $black;
     }
 
@@ -56,19 +60,21 @@
     }
 
     @include breakpoint (min-width, $tablet-width-Breakpoint) {
-        &__plank {
+        &__plank{ 
             height: 110px;
-        }
-
-        &--opened &__plank{ 
-            height: 109px;
         }
     }
 
     @include breakpoint (min-width, $desktop-width-Breakpoint) {
-        overflow: visible;
-        position: relative;
+        position: absolute;
+        flex-wrap: nowrap;
+        transform: translateX(-50%);
+        left: 50%;
         max-width: 1200px;
         margin-bottom: -110px;
+        padding-right: 130px;
+        &__plank {
+            width: min-content;
+        }
     }
 }
