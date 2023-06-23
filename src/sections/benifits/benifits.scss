@@ -78,5 +78,61 @@
            top: 0px;
         }
     }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        padding-top: 70px;
+        &__slogan {
+            font-size: 50px;
+        }
+        &__list-wrap {
+            padding-top: 0;
+            margin-top: 80px;
+            flex-flow: column-reverse;
+            padding-bottom: 55px;
+        }
+        &__list {
+            flex-direction: row;
+            position: relative;
+            gap: 0;
+            overflow: hidden;
+            &:nth-child(1) {
+                margin-top: -20px;
+                width: 97%;
+                align-self: center;
+                justify-content: space-around;
+            }
+            &:nth-child(2) {
+                top: -80px;
+                width: 100%;
+            }
+        }
+        &__item {
+            justify-content: center;
+            width: 27%;
+        }
+        &__item-img {
+            display: list-item;
+            flex-grow: 1;
+            min-height: 382px;
+            background: url('./images/shadow.svg') 0 103% no-repeat;
+    
+        }
+        &__image {
+            position: relative;
+            transform: translateY(80px);
+            left: 0;
+        }
+        &__title {
+            text-align: center;
+            font-size: 30px;
+            line-height: 1;
+            margin-bottom: 30px
+        }
+        &__text {
+            text-align: center;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
     
 }

@@ -8,4 +8,10 @@
             height: 374px;
         }
     }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        &__frame {
+            height: 502px;
+        }
+    }
 }

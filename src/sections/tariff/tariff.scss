@@ -115,12 +115,48 @@
             height: 75px;
             &--empty {
                 display: initial;
+                border: none;
             }
             &--special {
                 &::before {
-                    left: -40px;
+                    left: -42px;
                     height: 19px;
                     line-height: 16px;
+                };
+            };
+        }
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        &__wrap {
+            padding-top: 159px;
+        }
+        &__table {
+            margin-bottom: 0;
+        }
+        &__column-head {
+            height: 94px;
+            padding: 0;
+        }
+        &__value {
+            min-width: 233px;
+            height: 59px;
+        }
+        &__line-head {
+            font-size: 18px;
+            padding-left: 22px
+        }
+        &__column-head {
+            & .tariff__text:nth-child(1) {
+                font-size: 18px;
+                margin-bottom: 2px;
+            }
+            & .tariff__text:nth-child(2) {
+                font-size: 24px;
+            }
+            &--special {
+                &::before {
+                    left: -35px;
                 };
             };
         }
