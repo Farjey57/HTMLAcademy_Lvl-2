@@ -95,8 +95,11 @@
   }
 }
 
-.page__body {
+.page {
   height: 100%;
+}
+.page__body {
+  min-height: 100%;
   max-width: 1200px;
   padding: 0;
   margin: 0;
@@ -104,6 +107,8 @@
   overflow: hidden scroll;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: 1fr min-content;
 }
 .text {
   font-family: "Opensans", Arial, sans-serif;
@@ -200,11 +205,7 @@
 @media only screen and (min-width: 1200px) {
   .main-nav {
     display: flex;
-    position: absolute;
     z-index: 3;
-    top: 0;
-    right: 130px;
-    max-width: 620px;
     min-height: 100%;
     flex-wrap: wrap;
   }
@@ -213,7 +214,7 @@
   }
   .main-nav__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin: auto;
     margin-right: 0;
     -moz-column-gap: 78px;
@@ -306,11 +307,12 @@
   scale: 0.75;
 }
 .slider__btn {
-  width: 22px;
-  height: 41px;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
   border: none;
   cursor: pointer;
-  background: url("./images/icon-arrow.svg") center no-repeat;
+  background: url("./images/icon-arrow.svg") center right no-repeat;
   margin: 0;
   padding: 0;
   opacity: 0.3;
@@ -396,6 +398,7 @@
   .apps__button {
     max-width: 100%;
     margin-bottom: 10px;
+    font-size: 21px;
   }
   .apps__description {
     font-size: 18px;
@@ -487,6 +490,7 @@
 }
 @media only screen and (min-width: 660px) {
   .download__wrap {
+    background-image: url("./images/back-tablet.jpg");
     padding-top: 184px;
   }
   .download__title {
@@ -523,6 +527,8 @@
 .page-header {
   width: 100vw;
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
   left: 0;
@@ -531,9 +537,8 @@
   overflow: hidden;
 }
 .page-header__plank {
+  width: 100%;
   display: flex;
-  border: none;
-  height: 66px;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -541,8 +546,10 @@
 .page-header--opened {
   background-color: #283645;
 }
-.page-header--opened .page-header__plank {
+.page-header__plank {
   height: 69px;
+}
+.page-header--opened .page-header__plank {
   border-bottom: solid 1px #000000;
 }
 .page-header--opened .main-nav {
@@ -572,16 +579,20 @@
   .page-header__plank {
     height: 110px;
   }
-  .page-header--opened .page-header__plank {
-    height: 109px;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .page-header {
-    overflow: visible;
-    position: relative;
+    position: absolute;
+    flex-wrap: nowrap;
+    transform: translateX(-50%);
+    left: 50%;
     max-width: 1200px;
     margin-bottom: -110px;
+    padding-right: 130px;
+  }
+  .page-header__plank {
+    width: -moz-min-content;
+    width: min-content;
   }
 }
 
