@@ -136,16 +136,22 @@
                 <ul class="benifits__list">
                     <li class="benifits__item-img">
                         <picture>
-                            <source media="(min-width:1200px)" srcset="a.png">
+                            <source media="(min-width:1200px)" srcset="./images/iphone-screen-3-desktop.png" height="382px" width="186px">
                             <source media="(min-width:660px)" srcset="./images/iphone-screen-3-tablet.png" height="547px" width="268px">
                             <img class="benifits__image" src="./images/benifits-screen-1.png" alt="Пример использования приложения с наложением розового фона" height="275px" width="157px">
                         </picture>
                     </li>
                     <li class="benifits__item-img" hidden>
-                        <img class="benifits__image" src="" alt="Пример использования приложения с наложением розового фона">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/iphone-screen-2-desktop.png" height="382px" width="186px">
+                            <img class="benifits__image" src="#" alt="Пример использования приложения с наложением розового фона">
+                        </picture> 
                     </li>
                     <li class="benifits__item-img" hidden>
-                        <img class="benifits__image" src="" alt="Пример использования приложения с наложением розового фона">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/iphone-screen-1-desktop.png" height="382px" width="186px">
+                            <img class="benifits__image" src="#" alt="Пример использования приложения с наложением розового фона">
+                        </picture>
                     </li>
                 </ul>
             </div>
@@ -157,7 +163,7 @@
             <div class="research__wrap">
                 <h2 class="research__title text__heading text__heading--black text__heading--big">Эффект<br>на 24 часа!</h2>
                 <p class="research__text text__small">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-                <a class="research__link" href="#">Узнать больше об исследовании</a>
+                <a class="research__link text__small" href="#">Узнать больше об исследовании</a>
             </div>
         </section>
 
@@ -165,6 +171,8 @@
             <h2 class="visually-hidden">Отзывы
             </h2>
             <div class="reviews__wrap slider">
+                <button class="reviews__btn reviews__btn--left slider__btn slider__btn--left"></button>
+                <button class="reviews__btn reviews__btn--right slider__btn slider__btn--right"></button>
                 <ul class="reviews__list slider__list">
                     <li class="reviews__item slider__item slider__item--active">
                         <h2 class="reviews__title text__heading text__heading--black">Николай Петров
