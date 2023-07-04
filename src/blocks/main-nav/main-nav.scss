@@ -31,11 +31,7 @@
 
     @include breakpoint (min-width, $desktop-width-Breakpoint) {
         display: flex;
-        position: absolute;
         z-index: 3;
-        top: 0;
-        right: 130px;
-        max-width: 620px;
         min-height: 100%;
         flex-wrap: wrap;
         &__burger {
@@ -43,7 +39,7 @@
         }
         &__list {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
             margin: auto;
             margin-right: 0;
             column-gap: 78px;

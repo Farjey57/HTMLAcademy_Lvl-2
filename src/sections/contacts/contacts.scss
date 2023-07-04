@@ -19,6 +19,7 @@
     };
 
     &__link {
+        display: block;
         margin: 0;
         overflow-wrap: anywhere;
         &[href]:hover {
@@ -47,6 +48,23 @@
                 align-self: center;
             }
             
+        }
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        padding-top: 50px;
+        &__slogan {
+            font-size: 50px;
+        }
+        &__item {
+            width: 30%;
+            text-align: center;
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+        &__link {
+            margin-top: 25px;
         }
     }
 }

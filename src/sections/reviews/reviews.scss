@@ -23,13 +23,16 @@
     &__info {
         display: none;
     }
+    &__btn {
+        display: none;
+    }
     @include breakpoint (min-width, $tablet-width-Breakpoint) {
         padding-top: 90px;
         &__item {
             display: flex;
             flex-flow: column;
         }
-        &__title{
+        &__title {
             margin-top: 30px;
             margin-bottom: 0;
             font-size: 20px;
@@ -42,6 +45,50 @@
         &__info {
             display: block;
             margin-top: 10px;
+        }
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        padding-top: 72px;
+        &__wrap {
+            &::before {
+                content: '';
+                display: block;
+                width: 79px;
+                height: 63px;
+                margin: 0 auto;
+                background: url('./images/icon-quotes.svg');
+            }
+        }
+        &__list {
+            margin-top: 25px;
+            padding-left: 126px;
+            padding-right: 126px;
+        }
+        &__title {
+            font-size: 24px;
+            margin-top: 25px;
+        }
+        &__info {
+            font-size: 18px;
+        }
+
+        &__item {
+            top: 90px
+        }
+
+        &__btn {
+            display: block;
+            position: absolute;
+            top: 45%;
+            &--left {
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &--right {
+                right: 0;
+                transform: translateY(50%);
+            }
         }
     }
 }

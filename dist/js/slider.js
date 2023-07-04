@@ -1,14 +1,14 @@
 const sliderSlide = document.querySelectorAll('.reviews__list .slider__item');
 const slider = document.querySelector('.reviews__list');
 const sliderDots = document.querySelectorAll('.reviews__toggles .slider__toggle');
-//const sliderBtnNext = document.querySelector('');
-//const sliderBtnPrev = document.querySelector('');
+const sliderBtnNext = document.querySelector('.slider__btn--right');
+const sliderBtnPrev = document.querySelector('.slider__btn--left');
 
 let sliderCount = 0;
 let sliderWidth;
 
-//sliderBtnNext.addEventListener('click', nextSlide);
-//sliderBtnPrev.addEventListener('click', prevSlide);
+sliderBtnNext.addEventListener('click', nextSlide);
+sliderBtnPrev.addEventListener('click', prevSlide);
 
 function nextSlide () {
     sliderCount++;

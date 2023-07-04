@@ -30,4 +30,9 @@
         flex-flow: row;
         justify-content: space-between;
     }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }

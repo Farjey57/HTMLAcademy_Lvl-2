@@ -4,9 +4,6 @@
         display: flex;
         padding-top: 54px;
         justify-content: space-between;
-        &__img {
-            
-        }
         &__wrap {
             width: 50%;
             padding-top: 15px;
@@ -28,6 +25,33 @@
                 opacity: 0.3;
             }
         }
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        padding-top: 17px;
+        padding-bottom: 67px;
+        background-color: $greyback;
+        &__wrap {
+            align-self: center;
+        }
+        &__img {
+            width: 298px;
+            height: 345px;
+        }
+        &__title {
+            margin-bottom: 30px;
+            & br{
+                display: none;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        &__link {
+            font-size: 18px;
+        }
+        
     }
     
 }
