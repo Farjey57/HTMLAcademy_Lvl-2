@@ -36,9 +36,9 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer(),
-      csso
+      autoprefixer()
     ]))
+    .pipe(csso())
     .pipe(rename("index.min.css")) /*Переименовываем в min.css*/
     .pipe(sourcemap.write(".")) /*"."Путь куда сохранять*/
     .pipe(gulp.dest('./dist/'))
