@@ -10,6 +10,17 @@
     &__social {
         padding: 0;
     };
+
+    &__logo:hover .page-footer__img{
+        fill: $red;
+    }
+    &__logo:active .page-footer__img {
+        opacity: 0.3;
+        &:nth-child(1){
+            fill: initial;
+        }
+    }
+    
     &__copyright {
         font-style: normal;
         text-decoration: none;
@@ -26,7 +37,6 @@
     &__svg {
         margin-left: 13px;
     }
-    
 
     @include breakpoint (min-width, $tablet-width-Breakpoint) {
         flex-flow: row;

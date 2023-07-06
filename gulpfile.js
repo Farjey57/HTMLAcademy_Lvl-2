@@ -9,14 +9,11 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
+const pug = require('gulp-pug') 
 
 /*
 const svgstore = require("gulp-svgstore")
 const webp = require('gulp-webp');
-*/
-/*
-npm install gulp-csso --save-dev оптимизация css 
-npm i gulp-rename переименовать фал в style.min.css
 npm i gulp-webp 
 gulp-svgstore для объединения иконок в спрайт
 */
@@ -28,6 +25,14 @@ gulp-svgstore для объединения иконок в спрайт
  sass() - обрабатывается sass в css
  sync.stream() - локальная перезагрузка сервера
  */
+
+ const markup = () => {
+  return gulp.src("./src/pages/*.pug")
+    .pipe(pug())
+    .pipe(gulp.dest('./dist/'))
+ }
+
+ exports.markup = markup;
 
  /*Задача которая называется styles*/
 const styles = () => {
@@ -95,7 +100,8 @@ exports.fonts = fonts;
 const server = () => {
   sync.init({
     server: {
-      baseDir: './dist'
+      baseDir: './dist',
+      index: "main.html"
     },
     cors: true,
     notify: false, /*Отключает уведомления*/
@@ -109,6 +115,7 @@ exports.server = server;
 /* Отслеживает группы файлов*/ 
 
 const watcher = () => {
+  gulp.watch("./src/**/*.pug", markup);
   gulp.watch("./src/**/*.scss", styles); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
   gulp.watch("./src/img/*", images);
   /*gulp.watch("./src/img/*.svg", sprite);*/
@@ -122,7 +129,7 @@ const start = gulp.parallel(
 );
 
 const build = gulp.series(
-  styles, images, fonts
+  markup, styles, images, fonts
 );
 
 module.exports = {

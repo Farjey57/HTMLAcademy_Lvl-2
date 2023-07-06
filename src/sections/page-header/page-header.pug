@@ -1,0 +1,13 @@
+include ../../elements/burger/burger
+include ../../blocks/main-nav/main-nav
+
+mixin header(current)
+    header.page-header
+        .page-header__plank.container
+            a.page-header__logo.logo(href="index.html")
+                picture
+                    source(media="(min-width:1200px)", srcset="./images/logotype-desktop.svg")
+                    source(media="(min-width:660px)", srcset="./images/logotype-tablet.svg")
+                    img(class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK")
+            +burger("main-nav__burger")
+        +main-nav(current)

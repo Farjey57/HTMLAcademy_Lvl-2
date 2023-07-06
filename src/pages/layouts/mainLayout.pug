@@ -1,0 +1,32 @@
+include ../../sections/page-header/page-header
+include ../../sections/page-footer/page-footer
+
+
+<!DOCTYPE html>
+html.page(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block title
+            title Pink - Приложения для хорошего настроения
+        link(rel="canonical" href="https://farjey57.github.io/HTMLAcademy_Lvl-2/")
+        block description
+            meta(name="description", content="Перевоплотитесь в мир ярких эмоций с приложением Pink! Улучшите свое настроение с помощью нашего уникального набора функций: красочные обои, веселые стикеры, невероятные фильтры для фото и видео, и многое другое. Найдите вдохновение каждый день. Загрузите Pink сейчас и окунитесь в безграничный мир позитива и веселья!")
+        block styles
+            link(href="./index.min.css" rel="stylesheet")
+
+        link(rel="icon" href="./images/favicon32.svg" type="image/svg+xml" sizes="any")
+        link(rel="apple-touch-icon" sizes="152x152" href="./images/favicon152.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="./images/favicon180.png")
+        link(rel="manifest" href="manifest.webmanifest")
+        
+        body.page__body.text 
+        
+        +header("main")
+        block main
+            main
+                h1 HelloWorld
+        +footer
+        block script
+            script(src="./js/index.js")
