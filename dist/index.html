@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink - Приложения для хорошего настроения</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.min.css">
 
     <link rel="icon" href="./images/favicon32.svg" type="image/svg+xml" sizes="any">
     <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon152.png">
@@ -15,16 +15,17 @@
 </head>
 
 <body class="page__body text">
+
+    <object class="sprite visually-hidden" data="./images/sprite.svg" type="image/svg+xml"></object>
+
     <header class="page-header">
         <div class="page-header__plank container">
             <a class="page-header__logo logo" href="index.html">
-                <picture> <!--Для кадрирования изображения. Исчезающий тег, для браузера его как будто бы нет. стили на img-->
-                    <!--Загрузит c для 600px a для 1200px-->
+                <picture>
                     <source media="(min-width:1200px)" srcset="./images/logotype-desktop.svg">
                     <source media="(min-width:660px)" srcset="./images/logotype-tablet.svg">
                     <img class="logo__img" src="./images/logotype-mobile.svg" alt="Приложение PINK">
                 </picture>
-                
             </a>
             <button class="main-nav__burger burger" type="button">
                 <div class="burger__line"></div>
@@ -329,6 +330,9 @@
             </li>
         </ul>
         <a class="page-footer__copyright text__small" href="#">Разработано
+            <svg class="page-footer__svg" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="page-footer__img" d="M13.643.016L13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256zm0-11.564l-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237z" fill="#D22856"/>
+            </svg>
         </a>
         <!--TODO поменять марджин лефт поменять на gap-->
     </footer>

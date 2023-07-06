@@ -14,17 +14,19 @@
         font-style: normal;
         text-decoration: none;
         display: flex;
-        justify-content: center;
         align-items: center;
-        &::after {
-            content: '';
-            display: block;
-            width: 27px;
-            height: 34px;
-            background: url('./images/htmlacademy.svg') center no-repeat;
-            margin-left: 15px;
+        &:hover .page-footer__img {
+            fill: $blue;
+            transition: 0.2s;
+        }
+        &:active .page-footer__img {
+            opacity: 0.3;
         }
     };
+    &__svg {
+        margin-left: 13px;
+    }
+    
 
     @include breakpoint (min-width, $tablet-width-Breakpoint) {
         flex-flow: row;

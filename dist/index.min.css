@@ -1010,16 +1010,17 @@
   font-style: normal;
   text-decoration: none;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.page-footer__copyright::after {
-  content: "";
-  display: block;
-  width: 27px;
-  height: 34px;
-  background: url("./images/htmlacademy.svg") center no-repeat;
-  margin-left: 15px;
+.page-footer__copyright:hover .page-footer__img {
+  fill: #283645;
+  transition: 0.2s;
+}
+.page-footer__copyright:active .page-footer__img {
+  opacity: 0.3;
+}
+.page-footer__svg {
+  margin-left: 13px;
 }
 @media only screen and (min-width: 660px) {
   .page-footer {
@@ -1202,4 +1203,4 @@
     height: 502px;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.min.css.map */

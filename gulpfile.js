@@ -7,9 +7,11 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-/*
 const csso = require('gulp-csso');
-const rename = require('rename');
+const rename = require('gulp-rename');
+
+/*
+const svgstore = require("gulp-svgstore")
 const webp = require('gulp-webp');
 */
 /*
@@ -34,12 +36,10 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso
     ]))
-    /*
-    .pipe(csso())
-    .pipe(rename("main/text/ciao/goodbye.md"))
-    */
+    .pipe(rename("index.min.css")) /*Переименовываем в min.css*/
     .pipe(sourcemap.write(".")) /*"."Путь куда сохранять*/
     .pipe(gulp.dest('./dist/'))
     .pipe(sync.stream());
@@ -50,7 +50,7 @@ exports.styles = styles;
 /* Создание задачи для обработки фото */
 const images = () => {
   return gulp.src("./src/img/*")
-    .pipe(imagemin({ //Сожмем их
+    .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
@@ -72,7 +72,14 @@ const webp = () => {
 exports.webp = webp;
 */
 
+/*const sprite = () => {
+  return gulp.src("./src/img/*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("./dist/images/"))
+}
 
+exports.sprite = sprite;*/
 
 const fonts = () => {
   return gulp.src("./src/fonts/*")
@@ -104,6 +111,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("./src/**/*.scss", styles); /* что ищем в папке src на любом уровне вложенности с раширением scss. start- что сделать,если что-то изменилось в найденных файлах. В данном случае мы запускаем нашу сборку, набор инструкций */
   gulp.watch("./src/img/*", images);
+  /*gulp.watch("./src/img/*.svg", sprite);*/
   gulp.watch("./src/fonts/*", fonts);
   gulp.watch("./dist/*.html").on("change", sync.reload);
 }
