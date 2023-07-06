@@ -114,6 +114,9 @@
   .page {
     background: #283645;
   }
+  .page__body {
+    background: #FFFFFF;
+  }
 }
 .text {
   font-family: "Opensans", Arial, sans-serif;
