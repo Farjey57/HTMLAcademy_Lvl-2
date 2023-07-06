@@ -602,9 +602,13 @@
 }
 .page-header--opened .burger__line:nth-child(1) {
   transform: translate(0, 200%) rotate(45deg);
+  -webkit-transform: translate(0, 200%) rotate(45deg);
+  -ms-transform: translate(0, 200%) rotate(45deg);
 }
 .page-header--opened .burger__line:nth-child(3) {
   transform: translate(0, 0) rotate(-45deg);
+  -webkit-transform: translate(0, 0) rotate(-45deg);
+  -ms-transform: translate(0, 0) rotate(-45deg);
 }
 @media only screen and (min-width: 660px) {
   .page-header__plank {
