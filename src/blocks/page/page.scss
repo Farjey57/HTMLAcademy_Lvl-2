@@ -15,6 +15,9 @@
 
     @media (prefers-color-scheme: dark) {
         background: $blue;
+        &__body {
+            background: $white;
+        }
       }
     @include breakpoint (min-width, $desktop-width-Breakpoint) {
         
