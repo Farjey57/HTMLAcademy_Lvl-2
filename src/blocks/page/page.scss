@@ -1,5 +1,4 @@
 .page {
-    
     height: 100%;
     &__body {
         min-height: 100%;
@@ -14,6 +13,9 @@
         grid-template-rows: 1fr min-content;
     };
 
+    @media (prefers-color-scheme: dark) {
+        background: $blue;
+      }
     @include breakpoint (min-width, $desktop-width-Breakpoint) {
         
     }
