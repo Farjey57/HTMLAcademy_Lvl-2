@@ -1,0 +1,14 @@
+.backhead {
+    background: url('./images/back-mobile.jpg') center center no-repeat;
+    background-size: cover;
+    padding-top: 66px;
+    
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        background-image: url('./images/back-tablet.jpg');
+        padding-top: 184px;
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        background-image: url('./images/back-desktop.jpg');
+    }
+}

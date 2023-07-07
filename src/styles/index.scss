@@ -7,6 +7,7 @@
 
 /* elements */
 @import "../elements/burger/burger.scss";
+@import "../elements/backhead/backhead.scss";
 @import "../elements/backgr/backgr.scss";
 
 /* blocks */
@@ -32,3 +33,11 @@
 @import "../sections/page-footer/page-footer.scss";
 @import "../sections/tariff/tariff.scss";
 @import "../sections/map/map.scss";
+
+/*blocks from form-page*/
+
+@import "../blocks/heading-page/heading-page.scss";
+
+
+/*sections from form-page*/
+@import "../sections/form/form.scss";

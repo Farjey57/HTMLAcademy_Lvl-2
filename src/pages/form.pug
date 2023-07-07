@@ -1,0 +1,12 @@
+extends ./layouts/mainLayout
+include ../sections/form/form
+
+
+block title
+    title Конкурс на самое безбашенное путешествие с Пинк
+
+block main
+    main.page-main
+        .heading-page.backhead
+            h1.text__normal.heading-page__title(tabindex="1") Конкурс на самое безбашенное путешествие с Пинк
+        +form("container")
