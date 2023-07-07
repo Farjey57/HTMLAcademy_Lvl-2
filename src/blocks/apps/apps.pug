@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin apps(className)
+    .apps(class=className)
+        h3.visually-hidden Скачать приложение
+        +button("apps__button text__heading", "Скачать Приложение")
+        ul.apps__list
+            li.apps__item
+                a.apps__link.apps__link--ios(href="#")
+            li.apps__item
+                a.apps__link.apps__link--android(href="#")
+            li.apps__item
+                a.apps__link.apps__link--windows(href="#")
+        p.apps__description.text__normal.text__normal--small Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8

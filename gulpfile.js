@@ -101,7 +101,6 @@ const server = () => {
   sync.init({
     server: {
       baseDir: './dist',
-      index: "main.html"
     },
     cors: true,
     notify: false, /*Отключает уведомления*/

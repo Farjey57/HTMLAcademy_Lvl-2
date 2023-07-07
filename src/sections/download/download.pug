@@ -1,0 +1,11 @@
+include ../../blocks/apps/apps
+
+mixin download
+    section.download
+        .download__wrap
+            h2.download__title.text__normal Взгляните на жизнь<br>иначе!
+            picture
+                source(media="(min-width:1200px)", srcset="./images/phone-screen-group-desktop.png")
+                source(media="(min-width:660px)", srcset="./images/phone-screen-group-tablet.png")
+                img.download__demo(src="./images/phone-screen-group.png" alt="Пример использования приложения с наложением розового фона")
+        +apps("download__choise container")
