@@ -1,0 +1,6 @@
+include ../../blocks/slider/slider
+
+mixin reviews(className)
+    section.reviews(class=className)
+        h2.visually-hidden Отзывы
+        +slider("reviews")

@@ -1,0 +1,21 @@
+mixin slider(className)
+    .slider(class= className + "__wrap")
+        button.slider__btn.slider__btn--left(class= className + "__btn " + className + "__btn--left")
+        button.slider__btn.slider__btn--right(class= className + "__btn " + className + "__btn--right")
+        ul.slider__list(class= className + "__list")
+            li.slider__item.slider__item--active(class= className + "__item")
+                h2.text__heading.text__heading--black(class= className + "__title") Николай Петров
+                p.text__small.text__small--spacing(class= className + "__text") «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                p.text__small(class= className + "__info") 25 лет, водитель трамвая
+            li.slider__item(class= className + "__item")
+                h2.text__heading.text__heading--black(class= className + "__title") Фаина Раневская
+                p.text__small.text__small--spacing(class= className + "__text") «Я влaдeлeц интepнeт-издaтeльcтвa и пeчaтaю в ocнoвнoм нaучныe тpуды. Нecмoтpя нa чиcлo пocтoяннo публикующиxcя aвтopoв кoнкуpeнция выcoкaя, мнe нужнo былo чтoбы мoй caйт»
+                p.text__small(class= className + "__info") 47 лет, писатель
+            li.slider__item(class= className + "__item")
+                h2.text__heading.text__heading--black(class= className + "__title") Алексей Шалода
+                p.text__small.text__small--spacing(class= className + "__text") «а пять лет, которые я пользовался платформой, количество действий при публикации отзыва постоянно увеличивалось. Появилось множество вопросов и всяческих уточнений. Вот так вот!»
+                p.text__small(class= className + "__info") 34 лет, скотовод
+        .slider__toggles(class= className + "__toggles")
+            button.slider__toggle.slider__toggle--current
+            button.slider__toggle
+            button.slider__toggle

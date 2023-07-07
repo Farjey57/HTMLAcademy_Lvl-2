@@ -46,5 +46,8 @@
     @include breakpoint (min-width, $desktop-width-Breakpoint) {
         padding-top: 70px;
         padding-bottom: 70px;
+        &__copyright {
+            font-size: 18px;
+        }
     }
 }

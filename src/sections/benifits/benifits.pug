@@ -1,0 +1,32 @@
+mixin benifits
+    section.benifits
+        header.container.benifits__header.text__normal.text__normal--black
+            h2.visually-hidden Преимущества
+            p.benifits__slogan Устали от серости<br> мегаполиса?
+            p.benifits__slogan Нам есть, что вам <br> предложить!
+        .benifits__list-wrap.container.backgr
+            ul.benifits__list
+                li.benifits__item
+                    h3.benifits__title.text__heading.text__heading--black Поднимает настроение
+                    p.benifits__text.text__small Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+                li.benifits__item
+                    h3.benifits__title.text__heading.text__heading--black Меняет мир вокруг
+                    p.benifits__text.text__small Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+                li.benifits__item
+                    h3.benifits__title.text__heading.text__heading--black Заводит новых друзей
+                    p.benifits__text.text__small Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            ul.benifits__list
+                li.benifits__item-img
+                    picture
+                        source(media="(min-width:1200px)" srcset="./images/iphone-screen-3-desktop.png" height="382px" width="186px")
+                        source(media="(min-width:660px)" srcset="./images/iphone-screen-3-tablet.png" height="547px" width="268px")
+                        img.benifits__image(src="./images/benifits-screen-1.png" alt="Пример использования приложения с наложением розового фона" height="275px" width="157px")
+                li.benifits__item-img(hidden)
+                    picture
+                        source(media="(min-width:1200px)" srcset="./images/iphone-screen-2-desktop.png" height="382px" width="186px")
+                        img.benifits__image(src="#" alt="Пример использования приложения с наложением розового фона")
+                li.benifits__item-img(hidden)
+                    picture
+                        source(media="(min-width:1200px)" srcset="./images/iphone-screen-1-desktop.png" height="382px" width="186px")
+                        img.benifits__image(src="#" alt="Пример использования приложения с наложением розового фона")
+                

@@ -1,0 +1,47 @@
+mixin tariff(className)
+    section.tariff(class=className)
+        h2.visually-hidden Тарифы
+        .tariff__wrap.backgr.backgr--deg3.slider
+            table.tariff__table.slider__table
+                thead.tariff__thead
+                    tr.tariff__head
+                        td.tariff__column-head.tariff__column-head--empty
+                        td.tariff__column-head
+                            p.tariff__text.text__heading.text__heading--small База
+                            p.tariff__text.text__normal.text__normal--medium 1,99 USD
+                        td.tariff__column-head.tariff__column-head--special
+                            p.tariff__text.text__heading.text__heading--small СТАНДАРТ
+                            p.tariff__text.text__normal.text__normal--medium 3,99 USD
+                        td.tariff__column-head
+                            p.tariff__text.text__heading.text__heading--small АНЛИМ
+                            p.tariff__text.text__normal.text__normal--medium 9,99 USD
+                tbody.tariff__table-body
+                    tr.tariff__line
+                        td.tariff__value.tariff__line-head.text__small Розовый фильтр
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small розовый фильтр
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small розовый фильтр
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small розовый фильтр
+                    tr.tariff__line
+                        td.tariff__value.tariff__line-head.text__small Смайлики
+                        td.tariff__value.tariff__value--no
+                            span.tariff__prefix.text__small Смайлики
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small Смайлики
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small Смайлики
+                    tr.tariff__line
+                        td.tariff__value.tariff__line-head.text__small Комментарии
+                        td.tariff__value.tariff__value--no
+                            span.tariff__prefix.text__small Комментарии
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small Комментарии
+                        td.tariff__value.tariff__value--yes
+                            span.tariff__prefix.text__small Комментарии
+            .slider__toggles.tariff__toggles
+                button.slider__toggle
+                button.slider__toggle.slider__toggle--current
+                button.slider__toggle
+                            

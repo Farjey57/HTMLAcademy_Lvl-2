@@ -1,0 +1,18 @@
+
+
+mixin contacts(className)
+    section.contacts(class=className)
+        h2.visually-hidden Контакты
+        p.contacts__slogan.text__normal.text__normal--black Остались вопросы?<br> Свяжитесь с нами!
+
+        address.contacts__info
+            .contacts__item
+                h3.contacts__head.text__heading.text__heading--blue Звоните:
+                a.contacts__link.text__normal.text__normal--red(href="tel:+78125556666") +7 (812) 555-66-66
+            .contacts__item
+                h3.contacts__head.text__heading.text__heading--blue Пишите:
+                a.contacts__link.text__normal.text__normal--red(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+            .contacts__item
+                h3.contacts__head.text__heading.text__heading--blue Приезжайте в гости:
+                a.contacts__link.text__normal.text__normal--red(href="https://yandex.ru/maps/-/CHqpr7S" target="_blank") ул. Большая Конюшенная, 19/8
+
