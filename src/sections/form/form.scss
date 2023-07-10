@@ -3,11 +3,42 @@
     padding-bottom: 20px;
     &__title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
     &__span {
         display: none;
     }
+    &__set {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__field {
+        border: none;
+        padding: 42px 0;
+        margin: 0;
+        width: 100%;
+    }
+    &__legend {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 26px;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+    
 
     @include breakpoint(min-width, $tablet-width-Breakpoint) {
         padding-top: 95px;

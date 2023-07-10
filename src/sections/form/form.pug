@@ -5,17 +5,15 @@ include ../../elements/textarea/textarea
 include ../../blocks/button/button
 
 mixin form(className)
-    section.form 
-        h2.form__title.text__small(class=className) Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="form__span"> Пожалуйста, заполните форму ниже:
+    section.form(class=className)
+        h2.form__title.text__small Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="form__span"> Пожалуйста, заполните форму ниже:
         form.form__set
             fieldset.form__field
+                - const fio = [{id: "familyName", text: "ФАМИЛИЯ:", placeholder: "Укажите фамилию *"}, {id: "userName", text: "ИМЯ:", placeholder: "Введите ваше имя *"}, {id: "surName", text: "ОТЧЕСТВО:", placeholder: "Ну и отчество тоже"}]
                 ul.form__list
-                    li.form__item 
-                        +input("familyName", "ФАМИЛИЯ:", "Укажите фамилию *")
-                    li.form__item
-                        +input("userName", "ИМЯ:", "Введите ваше имя *")
-                    li.form__item
-                        +input("surName", "ОТЧЕСТВО:", "Ну и отчество тоже")
+                    each item in fio 
+                        li.form__item
+                            +input(item)
             fieldset.form__field.form__field--checkbox
                 legend.form__legend Ваши безбашенные достижения в путешествии
                 ul.form__list

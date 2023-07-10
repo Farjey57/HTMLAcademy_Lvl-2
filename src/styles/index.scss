@@ -5,15 +5,18 @@
 @import "../styles/colors.scss";
 @import "../styles/mixins.scss";
 
+@import "../blocks/text/text.scss";
+
 /* elements */
 @import "../elements/burger/burger.scss";
 @import "../elements/backhead/backhead.scss";
 @import "../elements/backgr/backgr.scss";
+@import "../elements/input/input.scss";
+
 
 /* blocks */
 @import "../blocks/container/container.scss";
 @import "../blocks/page/page.scss";
-@import "../blocks/text/text.scss";
 @import "../blocks/visually-hidden/visually-hidden.scss";
 @import "../blocks/main-nav/main-nav.scss";
 @import "../blocks/slider/slider.scss";
