@@ -20,8 +20,6 @@ html.page(lang="ru")
         link(rel="apple-touch-icon" sizes="152x152" href="./images/favicon152.png")
         link(rel="apple-touch-icon" sizes="180x180" href="./images/favicon180.png")
         link(rel="manifest" href="manifest.webmanifest")
-        block script
-            script(src="./js/index.js" async)
         
         body.page__body.text 
         
@@ -30,4 +28,6 @@ html.page(lang="ru")
             main
                 h1 HelloWorld
         +footer
+        block script
+            script(src="./js/index.js" async)
         
