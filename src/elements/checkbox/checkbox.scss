@@ -1,0 +1,24 @@
+.checkbox {
+    appearance: none;
+    margin: 0;
+    width: 35px;
+    height: 35px;
+    background: $white;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 2px solid $grey;
+    &__label {
+        align-self: center;
+        padding-left: 21px;
+    }
+    &:checked {
+        background: url('./images/checkbox-on.svg') center center no-repeat, $white;
+    }
+    &:hover {
+        border-color: $blue;
+    }
+    &:active {
+        border-color: $red;
+    }
+    
+}
