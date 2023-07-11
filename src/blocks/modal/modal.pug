@@ -1,0 +1,10 @@
+include ../button/button
+
+mixin modal(item)
+    .modal(class=item.class)
+        h2.modal__title.text__heading.text__heading--black= item.title
+        p.modal__text.text__small(class= item.class + "__text")= item.text 
+        div.modal__wrap-button(class= item.class + "__wrap-button")
+                +button("modal__button button--form text__heading", item.but) 
+
+            
