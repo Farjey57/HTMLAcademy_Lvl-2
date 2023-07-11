@@ -1,0 +1,16 @@
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1px;
+    border: 2px solid $grey;
+    padding: 19px 0px 19px 20px;
+    line-height: 1;
+    &::placeholder {
+        opacity: 1;
+        color: $blue;
+    }
+    &__label {
+        display: block;
+        margin-left: 21px;
+    }
+}

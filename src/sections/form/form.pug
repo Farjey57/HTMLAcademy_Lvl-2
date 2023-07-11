@@ -1,0 +1,45 @@
+include ../../elements/input/input
+include ../../elements/checkbox/checkbox
+include ../../elements/radiobox/radiobox
+include ../../elements/textarea/textarea
+include ../../blocks/button/button
+
+mixin form(className)
+    section.form
+        h2.form__title.text__small.container Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="form__span"> Пожалуйста, заполните форму ниже:
+        form.form__set
+            fieldset.form__field.container
+                - const fio = [{id: "familyName", text: "ФАМИЛИЯ:", placeholder: "Укажите фамилию *"}, {id: "userName", text: "ИМЯ:", placeholder: "Введите ваше имя *"}, {id: "surName", text: "ОТЧЕСТВО:", placeholder: "Ну и отчество тоже"}]
+                ul.form__list
+                    each item in fio 
+                        li.form__item
+                            +input(item)
+            .fieldset-back
+                fieldset.form__field.container
+                    legend.form__legend.text__small.text__small--red Ваши безбашенные достижения в путешествии
+                        - const achive = [{id: "selfie", text: "Сделал селфи с акулой", name: "selfie"}, {id: "burnt", text: "Обгорел на пляже", name: "burnt"}, {id: "norris", text: "Видел Чака Норриса", name: "norris"}, {id: "souvenir", text: "Накупил сувениров", name: "souvenir"}, {id: "tower", text: "Удержал башню", name: "tower"}, {id: "hotel", text: "Разгромил отель", name: "hotel"}]
+                    ul.form__list.form__list--checkbox.text__small.text__small--medium
+                        each item in achive
+                            li.form__item
+                                +checkbox(item)
+            fieldset.form__field.container
+                legend.form__legend.form__legend--hidden контактная информация
+                ul.form__list
+                    - const contacts = [{id: "userTel", text: "НОМЕР ТЕЛЕФОНА", placeholder: "Номер, пожалуйста", type: "tel"}, {id: "userEmail", text: "АДРЕС ПОЧТЫ", placeholder: "Введите почту *", type: "email"}]
+                    ul.form__list
+                        each item in contacts 
+                            li.form__item
+                                +input(item, "tel")
+            .fieldset-back
+                fieldset.form__field.container
+                    legend.form__legend.text__small.text__small--red С каким приложением путешествовали?
+                    - const app = [{id: "iOs", text: "Pink для iOS", name: "app", value: "true", checked: 1}, {id: "Android", text: "Pink на Android", name: "app", value: "false"}, {id: "Windows", text: "Windows Phone", name: "app", value: "false"}]
+                    ul.form__list.form__list--radiobox.text__small.text__small--medium
+                        each item in app
+                            li.form__item
+                                +radiobox(item)
+            fieldset.form__field.form__field--textarea.container
+                legend.form__legend.text__small.text__small--red ОПИШИТЕ СВОИ ЭМОЦИИ
+                +textarea("feedback","Можно прям в красках, не стесняясь в выражениях")
+            +button("form__button button--form text__heading", "Отправить форму") 
+            p.form__note.text__small <span>*</span> — обязательные поля

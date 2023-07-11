@@ -5,14 +5,22 @@
 @import "../styles/colors.scss";
 @import "../styles/mixins.scss";
 
+@import "../blocks/text/text.scss";
+
 /* elements */
 @import "../elements/burger/burger.scss";
+@import "../elements/backhead/backhead.scss";
 @import "../elements/backgr/backgr.scss";
+@import "../elements/input/input.scss";
+@import "../elements/checkbox/checkbox.scss";
+@import "../elements/radiobox/radiobox.scss";
+@import "../elements/textarea/textarea.scss";
+@import "../elements/fieldset-back/fieldset-back.scss";
+
 
 /* blocks */
 @import "../blocks/container/container.scss";
 @import "../blocks/page/page.scss";
-@import "../blocks/text/text.scss";
 @import "../blocks/visually-hidden/visually-hidden.scss";
 @import "../blocks/main-nav/main-nav.scss";
 @import "../blocks/slider/slider.scss";
@@ -32,3 +40,11 @@
 @import "../sections/page-footer/page-footer.scss";
 @import "../sections/tariff/tariff.scss";
 @import "../sections/map/map.scss";
+
+/*blocks from form-page*/
+
+@import "../blocks/heading-page/heading-page.scss";
+
+
+/*sections from form-page*/
+@import "../sections/form/form.scss";

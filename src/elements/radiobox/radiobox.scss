@@ -1,0 +1,23 @@
+.radiobox {
+    appearance: none;
+    margin: 0;
+    width: 37px;
+    height: 37px;
+    border-radius: 37px;
+    border: 2px solid $grey;
+    background-color: $white;
+    cursor: pointer;
+    &:checked{
+        background: url("../images/radiobox-on.svg") center center no-repeat, $white;
+    }
+    &:hover {
+        border-color: $blue;
+    }
+    &:active {
+        border-color: $red;
+    }
+    &__label {
+        padding-left: 31px;
+        align-self: center;
+    }
+}

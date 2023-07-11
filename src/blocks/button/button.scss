@@ -15,4 +15,12 @@
     &:active {
         color: #F2BFCC;
     }
+
+    &--form {
+        border-radius: 1px;
+        background: $green;
+        text-transform: uppercase;
+        border: 2px solid $green;
+        padding: 17px;
+    }
 }

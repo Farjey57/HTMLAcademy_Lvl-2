@@ -1,0 +1,3 @@
+mixin input(item)
+    label.input__label.text__small.text__small--red(for=item.id)= item.text
+    input.input.text__small(id=item.id, type= item.type? item.type : "text", placeholder=item.placeholder)
