@@ -11,7 +11,7 @@
     &:hover {
         background-color: $white;
         color: $red;
-    }
+    } 
     &:active {
         color: #F2BFCC;
     }
@@ -22,5 +22,17 @@
         text-transform: uppercase;
         border: 2px solid $green;
         padding: 17px;
+        &:hover {
+            background: $greenHover;
+            border-color: $greenHover;
+            color: $white;
+        }
+        &:active {
+            color: rgba($white, 30%);
+        }
+        &:disabled {
+            border: 2px solid $grey;
+            background: $grey;
+        }
     }
 }

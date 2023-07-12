@@ -5,6 +5,14 @@
     border: 2px solid $grey;
     padding: 19px 0px 19px 20px;
     line-height: 1;
+
+    &:hover {
+        border-color: $blue;
+    }
+    &:focus {
+        outline: 2px solid $red;
+        outline-offset: -2px;
+    }
     &::placeholder {
         opacity: 1;
         color: $blue;

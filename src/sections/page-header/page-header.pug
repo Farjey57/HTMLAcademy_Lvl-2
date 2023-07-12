@@ -1,7 +1,7 @@
 include ../../elements/burger/burger
 include ../../blocks/main-nav/main-nav
 
-mixin header(current)
+mixin header
     header.page-header
         .page-header__plank.container
             a.page-header__logo.logo(href="./index.html")
@@ -10,4 +10,4 @@ mixin header(current)
                     source(media="(min-width:660px)", srcset="./images/logotype-tablet.svg")
                     img.logo__img(src="./images/logotype-mobile.svg" alt="Приложение PINK")
             +burger("main-nav__burger")
-        +main-nav(current)
+        +main-nav
