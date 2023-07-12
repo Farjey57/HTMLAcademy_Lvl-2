@@ -27,7 +27,7 @@
     bottom: 0;
     overflow: hidden;
     /* фоновый цвет элемента */
-    background: #282828;
+    background: $blue;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
     /*&__row {
@@ -46,9 +46,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 30vw;
-        height: 30vw;
-        background: url('./images/preload-gif.gif') no-repeat center center / cover; /*расположение (url) изображения gif и др. параметры*/
+        width: 10vw;
+        height: 10vw;
+ /*расположение (url) изображения gif и др. параметры*/
     }
     /*&__item {
         position: absolute;
