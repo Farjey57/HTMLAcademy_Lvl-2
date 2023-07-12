@@ -20,4 +20,9 @@
         padding-left: 31px;
         align-self: center;
     }
+    @include breakpoint(min-width, $tablet-width-Breakpoint) {
+        &__label {
+            padding-left: 20px;
+        }
+    }
 }

@@ -18,8 +18,9 @@
         padding-top: 40px;
         padding-bottom: 42px;
         margin: 0;
+        width: 100%;
         &--textarea {
-            width: 100%;
+            
         }
     }
     &__legend {
@@ -55,7 +56,8 @@
         row-gap: 15px;
     }
     &__button {
-        min-width: 276px;
+        width: 100%;
+        max-width: 276px;
         margin: 0 auto;
     }
     &__note {
@@ -73,6 +75,11 @@
     @include breakpoint(min-width, $tablet-width-Breakpoint) {
         padding-top: 95px;
         padding-bottom: 50px;
+        padding: 95px 20px 50px;
+        &__set {
+            row-gap: 60px;
+            justify-content: space-between;
+        }
         &__title {
             max-width: 490px;
             margin: 0 auto;
@@ -82,16 +89,94 @@
         &__span {
             display: block;
         }
+        &__field {
+            border: 2px solid $grey;
+            border-radius: 1px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 60px;
+            padding-bottom: 55px;
+            &--fio {
+                border: 0;
+                order: 1;
+                padding: 0;
+                .form__item {
+                    flex-wrap: initial;
+                }
+                .form__list {
+                    row-gap: 52px;
+                }
+            }
+            &--app {
+                order: 2;
+                border: 2px solid $grey;
+                border-radius: 1px;
+            }
+            &--contacts {
+                padding-top: 50px;
+                order: 3;
+                .form__list {
+                    row-gap: 36px;
+                }
+                .form__item {
+                    flex-direction: column-reverse;
+                    row-gap: 17px;
+                }
+            }
+            &--achive {
+                order: 4;
+            }
+            &--textarea {
+                order: 5;
+            }
+        }
+        &__legend {
+            padding: 0px 20px 0;
+            &--hidden {
+                position: initial;
+                opacity: 1;
+            }
+        }
+        &__button {
+            order: 6;
+            max-width:296px;
+            margin: 0;
+        }
+        &__note {
+            order: 7;
+            width: initial;
+            margin: 0px;
+            align-self: center;
+        }
     }
 
     @include breakpoint(min-width, $desktop-width-Breakpoint) {
-        padding-bottom: 0px;
+        padding: 95px 130px 0;
         &__title {
             max-width: 755px;
             margin-bottom: 70px;
         }
         &__span {
             display: inline-block;
+        }
+        &__field {
+            &--fio {
+                width: 46%;
+                align-self: center;
+            }
+            &--app {
+                box-sizing: border-box;
+                width: 46%;
+                padding-top: 50px;
+                padding-left: initial;
+                padding-right: initial;
+            }
+        }
+        &__list {
+            &--radiobox {
+                margin-left: 72px;
+                row-gap: 39px;
+            }
         }
     }
 }

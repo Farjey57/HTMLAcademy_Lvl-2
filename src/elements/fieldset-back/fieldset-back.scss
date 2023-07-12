@@ -1,4 +1,7 @@
 .fieldset-back {
     background-color: $greyback;
     width: 100%;
+    @include breakpoint(min-width, $tablet-width-Breakpoint) {
+        display: contents;
+    }
 }
