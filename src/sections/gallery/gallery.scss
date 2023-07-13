@@ -1,0 +1,35 @@
+.gallery {
+    &__title {
+        text-align: center;
+        padding: 50px 35px 58px;
+        margin: 0;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    @include breakpoint(min-width, $tablet-width-Breakpoint) {
+        &__title {
+            padding: 95px 50px 80px;
+            font-size: 18px;
+        }
+        &__list {
+            grid-template: 1fr 1fr / 300px 300px;
+            justify-items: stretch;
+            column-gap: 20px;
+        }
+    }
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        &__list {
+            grid-template: 1fr 1fr/ 300px 300px 300px;
+            row-gap: 54px;
+        }
+        &__title {
+            padding: 95px 280px;
+        }
+    }
+}

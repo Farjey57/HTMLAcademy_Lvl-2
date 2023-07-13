@@ -18,7 +18,7 @@
 */
 @keyframes l {
   to {
-    clip-path: inset(0 -0.3ch 0 0)
+    clip-path: inset(0 -0.4ch 0 0)
   }
 }
 
@@ -55,9 +55,14 @@
         height: 20vw;
     }
     &__text {
+      width: 130px;
       color: $white;
-      font-size: 24px;
+      font-size: 18px;
       text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       clip-path: inset(0 3.5ch 0 0);
       animation: l 1s steps(3) infinite;
     }
@@ -76,6 +81,7 @@
             animation-delay: -1s;
         }
     }*/
+
 }
 
 .loaded_hiding .preloader {

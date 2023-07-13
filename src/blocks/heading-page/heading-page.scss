@@ -5,6 +5,9 @@
         max-width: 230px;
         margin: 0 auto;
     }
+    &--gallery {
+        padding-bottom: 80px;
+    }
 
     @include breakpoint(min-width, $tablet-width-Breakpoint) {
         padding: 184px 3% 70px;

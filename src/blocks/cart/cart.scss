@@ -1,0 +1,121 @@
+.cart {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    &--panoram {
+        max-width: initial;
+        margin-bottom: 20px;
+    }
+    &__img {
+        display: block;
+        max-width: 100%;
+        margin: 0  auto;
+    }
+    &__description {
+        background: $greyback;
+        padding: 25px 17px;
+        &--panoram {
+            box-sizing: border-box;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+    }
+    &__name {
+        margin: 0;
+        display: inline-block;
+    }
+    &__time {
+        margin-left: 3px;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__like {
+        display: flex;
+        column-gap: 14px;
+        align-items: center;
+    }
+    &__like-count {
+        text-transform: uppercase;
+    }
+    &__button {
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: url("./images/heart.svg") center center no-repeat;
+        cursor: pointer;
+        transition: 0.1s;
+        &:active {
+            scale: 0.8;
+        }
+    }
+    &__special {
+        display: none;
+    }
+
+    @include breakpoint(min-width, $tablet-width-Breakpoint) {
+        max-width: initial;
+        &__description {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 27px 30px;
+            &--panoram {
+                max-width: 620px;
+                position: relative;
+                &__wrap {
+                    width: max-content;
+                }
+            }
+        }
+        &__text {
+            &--panoram {
+                margin-bottom: 0;
+            }  
+        }
+        &__like {
+            margin-top: auto;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            &--panoram {
+                position: absolute;
+                right: 30px;
+                justify-content: initial;
+            }
+        }
+        &--panoram {
+            margin-bottom: 50px;
+            picture {
+                width: fit-content;
+                position: relative;
+                margin: 0 auto;
+            }
+        }
+        &__special {
+            display: flex;
+            align-content: center;
+            position: absolute;
+            background-color: $red;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 36px;
+            top: 57px;
+            right: 20px;
+        }
+    }
+
+    @include breakpoint (min-width, $desktop-width-Breakpoint) {
+        &__description {
+            &--panoram {
+                max-width: 940px;
+            }
+        }
+        &__special {
+            top: 54px;
+            right: 130px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+include ../../blocks/button/button 
+
+mixin editor(item)
+    section.editor
+        h2.editor__title.text__small Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
+        .editor__wrap
+            picture
+                source(media="(min-width:1200px)" srcset=item.srcdesk)
+                source(media="(min-width:660px)" srcset=item.srctab)
+                img.cart__img(src=item.src alt=item.alt class="editor__img--" + item.class)
+            ul.editor__tools
+                li.editor__tool
+                    button.editor__turn
+                    input.editor__range(type="range")
+                li.editor__tool
+                    button.editor__turn
+                    input.editor__range(type="range")
+                li.editor__tool
+                    button.editor__turn
+                    input.editor__range(type="range")
+            .editor__controls 
+                +button("editor__control text__heading", "Запостить") 
+                +button("editor__control text__heading", "Отменить") 

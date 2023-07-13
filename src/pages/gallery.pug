@@ -1,4 +1,6 @@
 extends ./layouts/mainLayout
+include ../sections/gallery/gallery
+include ../sections/editor/editor 
 
 
 block title
@@ -6,4 +8,8 @@ block title
 
 block main
     main.page-main
-        h1.visually-hidden(tabindex="1") Фотографии пользователей
+        .heading-page.backhead.heading-page--gallery
+            h1.text__normal.heading-page__title(tabindex="1") Фотографии пользователей
+        +gallery
+        - const editor = [{src: "./images/photo-7-tablet.jpg", srctab: "./images/photo-7-tablet.jpg", srcdesk: "./images/photo-7-desktop.jpg", alt: "Вид с площадки для прыжка", name: "Анна", time: "(5 минут назад)", text: "Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!", like: "215", class: "panoram"}]
+        +editor(editor[0])
