@@ -35,4 +35,29 @@
             background: $grey;
         }
     }
+    &--red {
+        border-color: $red;
+        color: $red;
+        &:hover {
+            color: $white;
+            background-color: $red;
+        }
+        &:active {
+            color: rgba($white, 30%);
+        }
+    }
+    &--grey {
+        border-color: rgba($blue, 10%);
+        color: rgba($blue, 10%);
+        &:hover {
+            border-color: rgba($blue, 30%);
+            color: rgba($blue, 30%);
+            background-color: inherit;
+        }
+        &:active {
+            border-color: rgba($blue, 0%);
+            color: rgba($white, 30%);
+            background-color: rgba($blue, 30%);
+        }
+    }
 }

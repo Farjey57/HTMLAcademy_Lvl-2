@@ -1,5 +1,145 @@
 .editor {
+    picture {
+        display: block;
+    }
+    &__title {
+        text-align: center;
+        padding: 45px 20px 50px;
+    }
     &__wrap {
         background: $greyback;
+        padding: 20px 20px 41px;
+        max-width: 100%;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    &__tools {
+        margin-top: 42px;
+        margin-bottom: 27px;
+        padding: 0 40px 48px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -27px;
+            display: block;
+            width: 100vw;
+            height: 1px;
+            background-color: rgba($blue, 10%);
+        }
+    }
+    &__tool {
+        input {
+            display: none;
+        }
+        &:nth-child(1) input{
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &__range {
+        appearance: none;
+        height: 2px;
+        background-color: $blue;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 240px;
+        margin-bottom: 7px;
+        &::-webkit-slider-thumb, &::-moz-range-thumb {
+            box-sizing: border-box;
+            background-color: $white;
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            border-color: $red;
+            border-width: 2px;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        &::-webkit-slider-thumb:active {
+            background-color: $red;
+        }
+        &::-moz-range-thumb:active {
+            background-color: $red;
+        }
+    }
+    &__turn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        &--active {
+            path {
+                opacity: 1;
+                fill: $red;
+            }
+        }
+        &:hover {
+            path {
+                opacity: 0.5;
+            }
+        }
+        &:active {
+            path {
+                opacity: 1;
+                fill: $red;
+            }
+        }
+    }
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 12px;
+        column-gap: 44px;
+        padding-top: 38px;
+    }
+    &__control {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        max-width: 940px;
+        margin: 0 auto;
+        &__wrap {
+            padding-top: 57px;
+            padding-bottom: 54px;
+            display: grid;
+            grid-template: 1fr /1fr 1fr;
+        }
+        &__img {
+            margin: 0;
+        }
+        &__tools {
+            display: flex;
+            flex-direction: column;
+            &::after {
+                display: none;
+            }
+        }
+        &__tool {
+            input {
+                display: block;
+                
+            }
+            &:nth-child(1) input{
+                position: initial;
+            } 
+        }
+        &__range {
+            transform: initial;
+        }
     }
 }
