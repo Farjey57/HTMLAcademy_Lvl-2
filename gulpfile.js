@@ -33,7 +33,6 @@ gulp-svgstore для объединения иконок в спрайт
     .pipe(gulp.dest('./dist/'))
  }
 
- exports.markup = markup;
 
  /*Задача которая называется styles*/
 const styles = () => {
@@ -56,8 +55,6 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
-
 /* Создание задачи для обработки фото */
 const images = () => {
   return gulp.src("./src/img/*")
@@ -70,8 +67,6 @@ const images = () => {
     .pipe(gulp.dest("./dist/images/"))
     .pipe(sync.stream());
 }
-
-exports.images = images;
 
 /*
 const webp = () => {
@@ -98,8 +93,6 @@ const fonts = () => {
     .pipe(sync.stream());
 }
 
-exports.fonts = fonts;
-
 // Server
 /*Сервер автоматически крутящийся*/
 
@@ -113,8 +106,6 @@ const server = () => {
     ui: false, /*Настройка сервера прямо в браузере*/
   });
 }
-
-exports.server = server;
 
 // Watcher
 /* Отслеживает группы файлов*/ 
@@ -138,5 +129,5 @@ const build = gulp.series(
 );
 
 module.exports = {
-  start, build
+  server, fonts, styles, markup, images, start, build
 };
