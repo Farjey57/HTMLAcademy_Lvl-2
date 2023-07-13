@@ -55,10 +55,13 @@
             line-height: 1;
             text-transform: none;
             padding-top: 25px;
-            padding-bottom: 0;
+            padding-bottom: 18px;
         }
         &__item {
             border: none;
+            &--active {
+                border-bottom: white 2px solid;
+            }
         }
     }
 

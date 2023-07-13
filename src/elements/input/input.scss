@@ -5,6 +5,14 @@
     border: 2px solid $grey;
     padding: 19px 0px 19px 20px;
     line-height: 1;
+
+    &:hover {
+        border-color: $blue;
+    }
+    &:focus {
+        outline: 2px solid $red;
+        outline-offset: -2px;
+    }
     &::placeholder {
         opacity: 1;
         color: $blue;
@@ -13,4 +21,21 @@
         display: block;
         margin-left: 21px;
     }
+    @include breakpoint(min-width, $tablet-width-Breakpoint) {
+        .form__field--fio &__label {
+            margin-left: 0;
+            margin-right: 18px;
+            align-self: center;
+        }
+    }
+}
+
+@include breakpoint(min-width, $tablet-width-Breakpoint) {
+    #userTel {
+        background: url("./images/phone-icon.svg") right 19px center no-repeat, linear-gradient($grey, $grey) right / 59px 59px no-repeat;
+    }
+    #userEmail {
+        background: url("./images/mail-icon.svg") right 20px center no-repeat, linear-gradient($grey, $grey) right / 59px 59px no-repeat;
+    }
+    
 }

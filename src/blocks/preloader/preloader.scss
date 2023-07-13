@@ -1,0 +1,94 @@
+/*@keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+@keyframes preloader-bounce {
+
+0%,
+100% {
+    transform: scale(0);
+}
+
+50% {
+    transform: scale(1);
+}
+}
+*/
+
+@keyframes l {
+    to {
+      clip-path: inset(0 -1ch 0 0)
+    }
+  }
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* фоновый цвет элемента */
+    background: #3e3a61;                         
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+    /*&__row {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: -35px;
+        margin-left: -35px;
+        text-align: center;
+        animation: preloader-rotate 2s infinite linear;
+    }*/
+    &__item {
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40vw;
+        height: 30vw;
+ /*расположение (url) изображения gif и др. параметры*/
+    }
+    /*&__item {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        background-color: #337ab7;
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        animation: preloader-bounce 2s infinite ease-in-out;
+        &:last-child {
+            top: auto;
+            bottom: 0;
+            animation-delay: -1s;
+        }
+    }*/
+
+    &__loading {
+        position: absolute;
+        clip-path: inset(0 1.8ch 0 0);
+        animation: l 1s steps(3) infinite;
+        color: $white;
+        font-size: 24px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.5s opacity;
+    opacity: 0;
+  }
+  
+.loaded .preloader {
+    display: none;
+}

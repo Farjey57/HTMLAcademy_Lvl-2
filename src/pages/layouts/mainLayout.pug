@@ -1,5 +1,6 @@
 include ../../sections/page-header/page-header
 include ../../sections/page-footer/page-footer
+include ../../blocks/preloader/preloader
 
 
 <!DOCTYPE html>
@@ -21,13 +22,19 @@ html.page(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="./images/favicon180.png")
         link(rel="manifest" href="manifest.webmanifest")
         
-        body.page__body.text 
-        
-        +header("main")
+        block script
+            script(src="./js/index.js" defer)
+
+        body.page__body.text         
+        +preloader
+        +header 
         block main
             main
                 h1 HelloWorld
         +footer
-        block script
-            script(src="./js/index.js" async)
+
+        script
+            include ../../blocks/preloader/preloader.js
+        
+        
         

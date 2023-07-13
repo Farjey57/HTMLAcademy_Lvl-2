@@ -1,0 +1,10 @@
+.reject {
+    @include breakpoint(max-width, $desktop-width-Breakpoint) {
+        padding-bottom: 54px;
+        padding-left: 20px;
+        padding-right: 20px;
+        &__wrap-button {
+            display: contents;
+        }
+    }
+}

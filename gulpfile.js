@@ -9,7 +9,8 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
-const pug = require('gulp-pug') 
+const pug = require('gulp-pug');
+const notify = require('gulp-notify');
 
 /*
 const svgstore = require("gulp-svgstore")
@@ -37,7 +38,12 @@ gulp-svgstore для объединения иконок в спрайт
  /*Задача которая называется styles*/
 const styles = () => {
   return gulp.src("./src/styles/index.scss")
-    .pipe(plumber())
+    .pipe(plumber({
+        errorHandler: notify.onError(err => ({
+        title: 'CssSyntaxError',
+        message: err.message
+      }))
+    }))
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([

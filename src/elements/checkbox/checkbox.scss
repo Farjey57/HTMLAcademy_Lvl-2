@@ -10,6 +10,7 @@
     &__label {
         align-self: center;
         padding-left: 21px;
+        cursor: pointer;
     }
     &:checked {
         background: url('./images/checkbox-on.svg') center center no-repeat, $white;
