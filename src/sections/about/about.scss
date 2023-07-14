@@ -19,4 +19,10 @@
         height: 100%;
         border: 0;
     }
+    @include breakpoint (min-width, $tablet-width-Breakpoint) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+
 }
