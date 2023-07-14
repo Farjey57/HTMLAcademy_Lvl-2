@@ -1,0 +1,30 @@
+mixin cart(item)
+    if item.class
+        .cart(class="cart--" + item.class)
+            picture
+                source(media="(min-width:1200px)" srcset=item.srcdesk)
+                source(media="(min-width:660px)" srcset=item.srctab)
+                img.cart__img(src=item.src alt=item.alt class="cart__img--" + item.class)
+                .cart__special.text__heading.text__heading--small12 ПАНОРАМА ДНЯ
+            .cart__description(class="cart__description--" + item.class)
+                .cart__wrap
+                    h3.cart__name.text__heading.text__heading--black.text__heading--small14= item.name
+                    span.cart__time.text__normal.text__normal--small12.text__normal--black= item.time
+                p.cart__text.text__small(class="cart__text--" + item.class)= item.text
+                .cart__like(class="cart__like--" + item.class)
+                    button.cart__button
+                    span.cart__like-count.text__normal.text__normal--small.text__normal--red(class="cart__like-count--" + item.class)= "Нравится: " + item.like
+    else
+        li.cart
+            picture
+                source(media="(min-width:1200px)" srcset=item.srcdesk)
+                source(media="(min-width:660px)" srcset=item.srctab)
+                img.cart__img(src=item.src alt=item.alt)
+            .cart__description
+                .cart__wrap
+                    h3.cart__name.text__heading.text__heading--black.text__heading--small14= item.name
+                    span.cart__time.text__normal.text__normal--small12.text__normal--black= item.time
+                p.cart__text.text__small= item.text
+                .cart__like
+                    button.cart__button
+                    span.cart__like-count.text__normal.text__normal--small.text__normal--red= "Нравится: " + item.like

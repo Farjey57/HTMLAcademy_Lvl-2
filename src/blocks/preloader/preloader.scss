@@ -16,12 +16,11 @@
 }
 }
 */
-
 @keyframes l {
-    to {
-      clip-path: inset(0 -1ch 0 0)
-    }
+  to {
+    clip-path: inset(0 -0.4ch 0 0)
   }
+}
 
 .preloader {
     /*фиксированное позиционирование*/
@@ -33,7 +32,7 @@
     bottom: 0;
     overflow: hidden;
     /* фоновый цвет элемента */
-    background: #3e3a61;                         
+    background: $blue;                         
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
     /*&__row {
@@ -49,12 +48,23 @@
     }*/
     &__item {
         position: relative;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 40vw;
-        height: 30vw;
- /*расположение (url) изображения gif и др. параметры*/
+        width: 20vw;
+        height: 20vw;
+    }
+    &__text {
+      width: 130px;
+      color: $white;
+      font-size: 18px;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      clip-path: inset(0 3.5ch 0 0);
+      animation: l 1s steps(3) infinite;
     }
     /*&__item {
         position: absolute;
@@ -72,16 +82,6 @@
         }
     }*/
 
-    &__loading {
-        position: absolute;
-        clip-path: inset(0 1.8ch 0 0);
-        animation: l 1s steps(3) infinite;
-        color: $white;
-        font-size: 24px;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 .loaded_hiding .preloader {
