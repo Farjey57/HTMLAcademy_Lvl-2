@@ -11,17 +11,17 @@ mixin editor(item)
             ul.editor__tools
                 li.editor__tool
                     button.editor__turn.editor__turn--active
-                        svg(xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none")
+                        svg(class="crop" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none")
                             path(d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#283645" opacity="0.3")
                     input.editor__range(type="range" min="0" max="100" step="0.1")
                 li.editor__tool
                     button.editor__turn
-                        <svg width="48" height="43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 000 4.24l11 11a3 3 0 004.24 0l11-11a3 3 0 000-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7a4 4 0 108 0c0-2.67-4-7-4-7zm10 17H0v3h48v-3z" opacity=".3" fill="#283645"/></svg>
                     input.editor__range(type="range" min="0" max="100" step="0.1")
                 li.editor__tool
                     button.editor__turn
-                        <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4a12 12 0 110 24 12 12 0 010-24zm0-4a16 16 0 100 32 16 16 0 000-32zm0 24.29a8.52 8.52 0 000-17" opacity=".3" fill="#283645"/></svg>
+                        <svg class="contrast" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4a12 12 0 110 24 12 12 0 010-24zm0-4a16 16 0 100 32 16 16 0 000-32zm0 24.29a8.52 8.52 0 000-17" opacity=".3" fill="#283645"/></svg>
                     input.editor__range(type="range" min="0" max="100" step="0.1")
             .editor__controls 
                 +button("button--red editor__control text__heading", "Запостить") 

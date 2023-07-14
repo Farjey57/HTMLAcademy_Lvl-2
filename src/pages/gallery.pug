@@ -13,3 +13,6 @@ block main
         +gallery
         - const editor = [{src: "./images/photo-7-tablet.jpg", srctab: "./images/photo-7-desktop.jpg", srcdesk: "./images/photo-7-desktop.jpg", alt: "Вид с площадки для прыжка", name: "Анна", time: "(5 минут назад)", text: "Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!", like: "215", class: "panoram"}]
         +editor(editor[0])
+
+append script
+    script(src="./js/editor.js" defer)
