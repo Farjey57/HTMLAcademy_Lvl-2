@@ -4,6 +4,17 @@ extends ./layouts/mainLayout
 block title
     title О самом лучшем приложении - Пинк
 
+block preloader
+
+
 block main
     main.page-main
-        h1.visually-hidden(tabindex="1") Информация о нашем продукте
+        .heading-page.backhead
+            h1.text__normal.heading-page__title(tabindex="1") Never gonna give you up
+        
+        
+        .about
+            h2.about__title.text__normal.text__normal--black A full commitment's what I'm thinking of<br>You wouldn't get this from any other guy
+            .about__wrap
+                <iframe class="about__video" width="560" height="315" src="https://www.youtube.com/embed/GFq6wH5JR2A?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

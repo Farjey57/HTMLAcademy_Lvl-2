@@ -25,8 +25,11 @@ html.page(lang="ru")
         block script
             script(src="./js/index.js" defer)
 
-        body.page__body.text         
-        +preloader
+        body.page__body.text
+
+        block preloader       
+            +preloader
+
         +header 
         block main
             main
