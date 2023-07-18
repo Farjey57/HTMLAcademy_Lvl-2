@@ -8,7 +8,7 @@
     background-color: $white;
     cursor: pointer;
     &:checked{
-        background: url("../images/radiobox-on.svg") center center no-repeat, $white;
+        background: url("./images/radiobox-on.svg") center center no-repeat, $white;
     }
     &:hover {
         border-color: $blue;
