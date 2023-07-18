@@ -33,6 +33,10 @@
         &:disabled {
             border: 2px solid $grey;
             background: $grey;
+            cursor: default;
+            &:active {
+                color: $white;
+            }
         }
     }
     &--red {
